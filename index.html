@@ -1,0 +1,3971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Institute of Hotel Management | Best Hotel Management Institute in Kolkata</title>
+  <meta name="description" content="Indian IHM - Premier Institute for Hotel Management, Hospitality Management, Culinary Management, and Hospital Management in Salt Lake, Kolkata. 9000+ Placements Globally.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://indianihm.com/wp-content/uploads/2021/11/iihm-fab-icon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit for High-Legibility Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ES Module Importmap for Lenis Smooth Scroll -->
+  <script type="importmap">
+  {
+    "imports": {
+      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & AUTHENTIC INDIAN IHM BRAND PALETTE
+       ========================================================================== */
+    :root {
+      /* Primary Brand Colors from indianihm.com */
+      --brand-primary: #27208c;       /* Iconic Indian IHM Royal Purple-Indigo */
+      --brand-deep: #17125a;          /* Deepest Midnight Violet */
+      --brand-accent: #c4843f;        /* Prestige Gold / Amber */
+      --brand-accent-hover: #a8692c;  /* Darker Gold */
+      --brand-gold-glow: rgba(196, 132, 63, 0.35);
+      --brand-light: #4a43b8;         /* Lighter purple for hover / accents */
+      --brand-glow: rgba(39, 32, 140, 0.45);
+
+      /* Surface & Neutrals */
+      --background: #ffffff;
+      --foreground: #1f1814;
+      --surface: #fbf4ee;
+      --surface-card: #ffffff;
+      --surface-alt: #f6e9dd;
+      --ink: #1f1814;
+      --ink-soft: #6e6058;
+      --hairline: #eddccd;
+      --on-brand: #ffffff;
+
+      /* Radii */
+      --radius-sm: 0.5rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1.25rem;
+      --radius-card: 1.5rem;
+      --radius-card-lg: 2rem;
+      --radius-pill: 62.5rem;
+
+      /* Glassmorphism Tokens */
+      --glass-bg: rgba(255, 255, 255, 0.12);
+      --glass-bg-dark: rgba(23, 18, 90, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.22);
+      --glass-shadow: 0 25px 50px -12px rgba(18, 14, 64, 0.45);
+    }
+
+    /* ==========================================================================
+       BASE & RESET
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: auto; /* Handled by Lenis */
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--foreground);
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: clip;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brand-accent);
+      outline-offset: 2px;
+    }
+
+    main {
+      width: 100%;
+      padding: 0.5rem;
+      overflow-x: clip;
+    }
+    @media (min-width: 640px) {
+      main {
+        padding: 0.75rem;
+      }
+    }
+
+    .section-container {
+      max-width: 78rem;
+      margin: 0 auto;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 46rem;
+      margin: 0 auto 3.5rem;
+    }
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--brand-primary);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .section-desc {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       INTRO LOADER
+       ========================================================================== */
+    #intro-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: var(--brand-deep);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      will-change: transform;
+      transition: transform 850ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    #intro-loader.slide-up {
+      transform: translateY(-105%);
+    }
+    .loader-logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .loader-logo-wrap.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .loader-logo-img {
+      height: 3.5rem;
+      width: auto;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .loader-progress-track {
+      width: 12rem;
+      height: 2px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      position: relative;
+    }
+    .loader-progress-fill {
+      position: absolute;
+      inset: 0;
+      background: var(--brand-accent);
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 1280ms cubic-bezier(0.65, 0, 0.35, 1) 120ms;
+    }
+
+    /* ==========================================================================
+       TOP ANNOUNCEMENT BAR & HEADER
+       ========================================================================== */
+    .top-announcement-bar {
+      background: rgba(23, 18, 90, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.45rem 1.5rem;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 30;
+    }
+    @media (max-width: 768px) {
+      .top-announcement-bar {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+      }
+    }
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .top-badge-pulse {
+      background: var(--brand-accent);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .top-bar-right a {
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      transition: color 200ms ease;
+    }
+    .top-bar-right a:hover {
+      color: var(--brand-accent);
+    }
+
+    .site-header {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      position: relative;
+      z-index: 20;
+    }
+    @media (min-width: 640px) {
+      .site-header {
+        padding: 1.5rem 2.5rem;
+      }
+    }
+
+    .header-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .header-logo-img {
+      height: 2.85rem;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    }
+    @media (min-width: 768px) {
+      .header-logo-img {
+        height: 3.25rem;
+      }
+    }
+
+    .header-nav {
+      display: none;
+      align-items: center;
+      gap: 1.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    @media (min-width: 1024px) {
+      .header-nav {
+        display: flex;
+      }
+    }
+    .header-nav a {
+      color: rgba(255, 255, 255, 0.88);
+      transition: color 200ms ease;
+      position: relative;
+    }
+    .header-nav a:hover {
+      color: var(--brand-accent);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .header-cta-btn {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand-accent);
+      color: #120e40;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 15px rgba(196, 132, 63, 0.35);
+      transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
+    }
+    @media (min-width: 640px) {
+      .header-cta-btn {
+        display: inline-flex;
+      }
+    }
+    .header-cta-btn:hover {
+      background: #d69a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(196, 132, 63, 0.45);
+    }
+
+    .burger-btn {
+      width: 2.75rem;
+      height: 2.75rem;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background 200ms ease;
+    }
+    .burger-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .burger-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .burger-bars span {
+      display: block;
+      width: 1.15rem;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (High-Contrast, Visible Text & Glassmorphism Form)
+       ========================================================================== */
+    .hero-section {
+      background: var(--brand-deep);
+      color: #ffffff;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: var(--radius-card-lg);
+      min-height: calc(100svh - 1rem);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(23, 18, 90, 0.3);
+    }
+
+    .hero-bg-parallax {
+      position: absolute;
+      inset: 0;
+      z-index: -10;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .hero-bg-inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -12%;
+      height: 124%;
+      width: 100%;
+      will-change: transform;
+    }
+    .hero-bg-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+    .hero-bg-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(23, 18, 90, 0.94) 0%,
+        rgba(39, 32, 140, 0.84) 45%,
+        rgba(18, 14, 64, 0.92) 100%
+      );
+    }
+
+    .hero-content-wrap {
+      flex: 1;
+      padding: 1.5rem 1.5rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    @media (min-width: 1024px) {
+      .hero-content-wrap {
+        grid-template-columns: 1.2fr 0.9fr;
+        padding: 2.5rem 3rem 4rem;
+        gap: 3.5rem;
+      }
+    }
+
+    .hero-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-prestige-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(196, 132, 63, 0.18);
+      border: 1px solid rgba(196, 132, 63, 0.4);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-pill);
+      color: #f3d2ac;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      align-self: flex-start;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .hero-prestige-badge svg {
+      width: 1rem;
+      height: 1rem;
+      color: var(--brand-accent);
+    }
+
+    .hero-main-title {
+      font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5);
+    }
+    .hero-main-title .highlight-gold {
+      color: var(--brand-accent);
+      display: inline-block;
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 38rem;
+      font-weight: 400;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-proof-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .proof-stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .proof-stat-val {
+      font-family: "Outfit", sans-serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+    }
+    .proof-stat-lbl {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    /* Right Hero Column: Glassmorphism Admission Form */
+    .hero-glass-form-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-card);
+      padding: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(14, 10, 48, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    @media (max-width: 640px) {
+      .hero-glass-form-card {
+        padding: 1.5rem;
+      }
+    }
+    .hero-glass-form-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 80% 20%, rgba(196, 132, 63, 0.12), transparent 40%);
+      pointer-events: none;
+    }
+
+    .form-header {
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .form-header-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--brand-accent);
+      margin-bottom: 0.3rem;
+    }
+    .form-header-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .form-header-sub {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 0.35rem;
+    }
+
+    .hero-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .glass-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .glass-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.02em;
+    }
+    .glass-input, .glass-select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: #1f1814;
+      transition: all 200ms ease;
+    }
+    .glass-input:focus, .glass-select:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: var(--brand-accent);
+      box-shadow: 0 0 0 3px rgba(196, 132, 63, 0.35);
+    }
+
+    .form-submit-btn {
+      background: linear-gradient(135deg, #c4843f 0%, #a8692c 100%);
+      color: #120e40;
+      padding: 0.9rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: 0 8px 20px rgba(196, 132, 63, 0.35);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(196, 132, 63, 0.5);
+    }
+    .form-submit-btn svg {
+      width: 1.15rem;
+      height: 1.15rem;
+      transition: transform 200ms ease;
+    }
+    .form-submit-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    .form-guarantee-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    /* Form Success State */
+    .form-success-message {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .form-success-message.active {
+      display: flex;
+    }
+    .success-icon-circ {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: #10b981;
+      border-radius: var(--radius-pill);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+    }
+    .success-icon-circ svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION: RECRUITER STRIP (TRUST LOGOS)
+       ========================================================================== */
+    .recruiter-strip {
+      background: #ffffff;
+      padding: 2.5rem 1.5rem;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .recruiter-strip-inner {
+      max-width: 78rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .recruiter-strip-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+    .recruiter-logos-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem 3rem;
+    }
+    .recruiter-tag {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #5a4c43;
+      letter-spacing: 0.05em;
+      transition: color 200ms ease;
+    }
+    .recruiter-tag:hover {
+      color: var(--brand-primary);
+    }
+
+    /* ==========================================================================
+       NEW SECTION: WHY CHOOSE US
+       ========================================================================== */
+    .why-choose-section {
+      background: #ffffff;
+      padding: 5.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .why-choose-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .why-choose-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .why-choose-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .why-choose-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    @media (min-width: 640px) {
+      .why-choose-pillars {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .why-pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+    }
+    .why-pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(39, 32, 140, 0.08);
+      border-color: rgba(39, 32, 140, 0.3);
+    }
+    .pillar-icon-box {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: var(--radius-md);
+      background: rgba(39, 32, 140, 0.1);
+      color: var(--brand-primary);
+      display: grid;
+      place-items: center;
+    }
+    .pillar-icon-box svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+    .pillar-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+    .pillar-text {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    .why-choose-media {
+      position: relative;
+    }
+    .why-choose-media-img {
+      border-radius: var(--radius-card-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(40, 28, 20, 0.15);
+      border: 1px solid var(--hairline);
+    }
+    .why-floating-card {
+      position: absolute;
+      bottom: -1.5rem;
+      left: -1.5rem;
+      background: var(--brand-primary);
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      border-radius: var(--radius-card);
+      box-shadow: 0 15px 35px rgba(39, 32, 140, 0.35);
+      max-width: 18rem;
+    }
+    @media (max-width: 640px) {
+      .why-floating-card {
+        position: static;
+        margin-top: 1.5rem;
+        max-width: 100%;
+      }
+    }
+    .floating-card-num {
+      font-family: "Outfit", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+    }
+    .floating-card-lbl {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 0.35rem;
+    }
+
+    /* ==========================================================================
+       COURSES SECTION WITH INTERACTIVE TABS (BACHELOR & MASTERS)
+       ========================================================================== */
+    .courses-section {
+      background: var(--surface);
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+    @media (min-width: 640px) {
+      .courses-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    /* Modern Pill Tabs Control */
+    .courses-tabs-nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+    }
+    .tabs-pill-container {
+      background: #eddccd;
+      padding: 0.4rem;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      gap: 0.5rem;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .tab-btn {
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #6e6058;
+      transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .tab-btn.active {
+      background: var(--brand-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(39, 32, 140, 0.35);
+    }
+    .tab-btn-badge {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .tab-btn.active .tab-btn-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* Courses Tab Panes */
+    .tab-pane {
+      display: none;
+      animation: tabFadeIn 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .tab-pane.active {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .tab-pane.active {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @keyframes tabFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Course Card Component */
+    .course-card {
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--hairline);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
+    }
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px -10px rgba(39, 32, 140, 0.18);
+      border-color: rgba(39, 32, 140, 0.3);
+    }
+
+    .course-card-img-wrap {
+      height: 12rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--brand-deep);
+    }
+    .course-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+    .course-card:hover .course-card-img {
+      transform: scale(1.05);
+    }
+    .course-card-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--brand-primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    .course-card-duration {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: rgba(40, 28, 20, 0.8);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .course-card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .course-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .course-excerpt {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .course-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      border-top: 1px solid var(--hairline);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+    .course-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #43372f;
+      font-weight: 500;
+    }
+    .course-highlight-item svg {
+      width: 1rem;
+      height: 1rem;
+      color: var(--brand-accent-hover);
+      flex-shrink: 0;
+    }
+
+    .course-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--hairline);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+    .apply-course-btn {
+      background: var(--brand-primary);
+      color: #ffffff;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.825rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 200ms ease;
+    }
+    .apply-course-btn:hover {
+      background: #17125a;
+      transform: translateY(-2px);
+    }
+    .course-curriculum-link {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 200ms ease;
+    }
+    .course-curriculum-link:hover {
+      color: var(--brand-primary);
+    }
+
+    /* ==========================================================================
+       MIDDLE OF PAGE CTA BANNER (HIGH IMPACT)
+       ========================================================================== */
+    .mid-page-cta {
+      background: linear-gradient(135deg, #27208c 0%, #17125a 60%, #0f0b3d 100%);
+      color: #ffffff;
+      border-radius: var(--radius-card-lg);
+      margin: 1.5rem 0.5rem;
+      padding: 4.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(39, 32, 140, 0.3);
+    }
+    @media (min-width: 640px) {
+      .mid-page-cta {
+        margin: 2rem 0.75rem;
+        padding: 5rem 3.5rem;
+      }
+    }
+    .mid-page-cta::before {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 40rem;
+      height: 40rem;
+      background: radial-gradient(circle, rgba(196, 132, 63, 0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .mid-cta-inner {
+      max-width: 58rem;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .mid-cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(196, 132, 63, 0.2);
+      border: 1px solid rgba(196, 132, 63, 0.45);
+      color: #f3d2ac;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.4rem 1.1rem;
+      border-radius: var(--radius-pill);
+    }
+    .mid-cta-title {
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+    }
+    .mid-cta-title span {
+      color: var(--brand-accent);
+    }
+    .mid-cta-desc {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 44rem;
+      line-height: 1.6;
+    }
+
+    .mid-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .cta-btn-gold {
+      background: var(--brand-accent);
+      color: #17125a;
+      padding: 1rem 2.25rem;
+      border-radius: var(--radius-pill);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 25px rgba(196, 132, 63, 0.4);
+      transition: all 200ms ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .cta-btn-gold:hover {
+      background: #d69a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(196, 132, 63, 0.55);
+    }
+    .cta-btn-outline {
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      padding: 0.9rem 2rem;
+      border-radius: var(--radius-pill);
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 200ms ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .cta-btn-outline:hover {
+      border-color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .mid-cta-perks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem 2.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.825rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .mid-cta-perk {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .mid-cta-perk svg {
+      width: 1rem;
+      height: 1rem;
+      color: var(--brand-accent);
+    }
+
+    /* ==========================================================================
+       NEW SECTION: ADVANTAGE@Indianihm
+       ========================================================================== */
+    .advantage-section {
+      background: #ffffff;
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+    @media (min-width: 640px) {
+      .advantage-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    .advantage-tagline {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #e3262b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    @media (min-width: 640px) {
+      .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .advantage-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .advantage-item-card {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+    }
+    .advantage-item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(39, 32, 140, 0.1);
+      border-color: rgba(39, 32, 140, 0.35);
+    }
+    .advantage-badge-num {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: var(--radius-md);
+      background: var(--brand-primary);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-family: "Outfit", sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .advantage-card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-bottom: 0.35rem;
+    }
+    .advantage-card-content p {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       FACILITIES & CAMPUS TRAINING LABS SECTION
+       ========================================================================== */
+    .facilities-section {
+      background: var(--surface);
+      padding: 5.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .facilities-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    .facilities-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    @media (min-width: 768px) {
+      .facilities-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .facility-box {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+    .facility-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+    .facility-img-wrap {
+      height: 14rem;
+      overflow: hidden;
+    }
+    .facility-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+    .facility-box:hover .facility-img-wrap img {
+      transform: scale(1.05);
+    }
+    .facility-content {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .facility-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+    .facility-desc {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       NEW SECTION: INDUSTRY SPEAK (CELEBRITY CHEFS & LEADERS)
+       ========================================================================== */
+    .industry-speak-section {
+      background: #ffffff;
+      padding: 5.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .industry-speak-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    .industry-speak-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    @media (min-width: 768px) {
+      .industry-speak-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .industry-speak-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--hairline);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+    .industry-speak-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(39, 32, 140, 0.12);
+    }
+    .speak-img-wrap {
+      height: 15rem;
+      overflow: hidden;
+      background: var(--brand-deep);
+    }
+    .speak-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+    .industry-speak-card:hover .speak-img-wrap img {
+      transform: scale(1.05);
+    }
+    .speak-card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .speak-author {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+    }
+    .speak-author-role {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .speak-quote {
+      font-size: 0.9rem;
+      color: #43372f;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       SECTION: OUR ALUMNI (AUTHENTIC INDIAN IHM PLACEMENTS)
+       ========================================================================== */
+    .alumni-section {
+      background: var(--surface);
+      padding: 5.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .alumni-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    @media (min-width: 1024px) {
+      .alumni-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .alumni-card {
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--hairline);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+    .alumni-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(39, 32, 140, 0.12);
+    }
+    .alumni-avatar {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: var(--radius-pill);
+      object-fit: cover;
+      border: 3px solid var(--brand-primary);
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 15px rgba(39, 32, 140, 0.2);
+    }
+    .alumni-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .alumni-location {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      margin-top: 0.2rem;
+    }
+    .alumni-placement {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--brand-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .alumni-quote {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       SITE FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--brand-deep);
+      color: #ffffff;
+      border-radius: var(--radius-card-lg);
+      margin-top: 0.75rem;
+      padding: 4rem 1.5rem 2rem;
+    }
+    @media (min-width: 640px) {
+      .site-footer {
+        padding: 5rem 2.5rem 2.5rem;
+      }
+    }
+
+    .footer-cols-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    @media (min-width: 768px) {
+      .footer-cols-grid {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .footer-logo {
+      height: 3.25rem;
+      width: auto;
+      object-fit: contain;
+      align-self: flex-start;
+    }
+    .footer-about-text {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.6;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .footer-contact-item svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      color: var(--brand-accent);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .footer-nav-col h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--brand-accent);
+      margin-bottom: 1.25rem;
+    }
+    .footer-nav-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .footer-nav-col a {
+      transition: color 200ms ease;
+    }
+    .footer-nav-col a:hover {
+      color: var(--brand-accent);
+    }
+
+    .footer-bottom-bar {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.825rem;
+      color: rgba(255, 255, 255, 0.6);
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 640px) {
+      .footer-bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    .footer-social-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .footer-social-links a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 200ms ease;
+    }
+    .footer-social-links a:hover {
+      color: var(--brand-accent);
+    }
+
+    /* ==========================================================================
+       MODAL: ADMISSION & CAMPUS VISIT (PORTALED)
+       ========================================================================== */
+    .modal-portal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 250ms ease;
+    }
+    .modal-portal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 14, 64, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .modal-panel {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 32rem;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      padding: 2.25rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      transform: scale(0.95) translateY(15px);
+      transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-portal.active .modal-panel {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .modal-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+    }
+    .modal-close-btn {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--radius-pill);
+      background: #f6e9dd;
+      display: grid;
+      place-items: center;
+      color: #6e6058;
+      transition: background 200ms ease, color 200ms ease;
+    }
+    .modal-close-btn:hover {
+      background: #eddccd;
+      color: #1f1814;
+    }
+
+    .modal-form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .modal-input-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .modal-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #5a4c43;
+    }
+    .modal-input, .modal-select, .modal-textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e3cdbb;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: #1f1814;
+    }
+    .modal-input:focus, .modal-select:focus, .modal-textarea:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(39, 32, 140, 0.15);
+    }
+
+    .modal-submit {
+      background: var(--brand-primary);
+      color: #ffffff;
+      padding: 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.75rem;
+      transition: background 200ms ease;
+    }
+    .modal-submit:hover {
+      background: var(--brand-deep);
+    }
+
+    /* Modal Success State */
+    .modal-success-state {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .modal-success-state.active {
+      display: flex;
+    }
+
+    /* ==========================================================================
+       MOBILE MENU OVERLAY
+       ========================================================================== */
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+      background: var(--brand-deep);
+      color: #ffffff;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms ease;
+    }
+    .mobile-menu-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: auto 0;
+    }
+    .mobile-nav-links a {
+      font-size: 1.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    .mobile-nav-links a:hover {
+      color: var(--brand-accent);
+    }
+
+    /* ==========================================================================
+       REFRESH LAYER — hero, top strip, spacing, engagement, mobile
+       ========================================================================== */
+
+    /* ---------- Top strip (now inside the hero) ---------- */
+    .top-announcement-bar {
+      background: rgba(14, 10, 48, 0.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.55rem 1.5rem;
+      gap: 1.25rem;
+      flex-direction: row;
+      font-size: 0.78rem;
+      z-index: 25;
+    }
+    @media (min-width: 640px) { .top-announcement-bar { padding: 0.6rem 2.5rem; } }
+    .top-badge-pulse {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex-shrink: 0;
+      font-size: 0.68rem;
+      padding: 0.3rem 0.75rem;
+      color: #17125a;
+      letter-spacing: 0.06em;
+    }
+    .pulse-dot {
+      width: 0.45rem; height: 0.45rem; border-radius: 50%;
+      background: #17125a; position: relative;
+    }
+    .pulse-dot::after {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: #17125a; animation: pulseRing 1.6s ease-out infinite;
+    }
+    @keyframes pulseRing { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+
+    .top-ticker {
+      flex: 1; min-width: 0; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+    .top-ticker-track {
+      display: inline-flex; white-space: nowrap;
+      animation: marquee 32s linear infinite;
+    }
+    .ticker-item { color: rgba(255,255,255,.85); font-weight: 500; padding: 0 1.1rem; position: relative; }
+    .ticker-item::before {
+      content: "\2726"; color: var(--brand-accent); position: absolute; left: -0.3rem; font-size: .6rem; top: .2rem;
+    }
+    .top-bar-right { gap: 1.25rem; flex-shrink: 0; }
+    .top-bar-right a { font-weight: 600; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ---------- Hero ---------- */
+    .hero-section {
+      min-height: auto;
+      border-radius: var(--radius-card-lg);
+    }
+    @media (min-width: 1024px) { .hero-section { min-height: min(calc(100svh - 1.5rem), 880px); } }
+    .hero-bg-inner img { object-position: center 40%; }
+    .hero-bg-inner::after {
+      background:
+        linear-gradient(90deg, rgba(23, 18, 90, 0.96) 0%, rgba(23, 18, 90, 0.86) 42%, rgba(23, 18, 90, 0.55) 100%),
+        linear-gradient(180deg, rgba(14, 10, 48, 0.2) 0%, rgba(14, 10, 48, 0.65) 100%);
+    }
+    .hero-section::after {
+      content: ""; position: absolute; width: 38rem; height: 38rem; right: -12rem; top: -10rem;
+      background: radial-gradient(circle, rgba(196, 132, 63,.22), transparent 60%);
+      z-index: -5; pointer-events: none;
+    }
+    .site-header { padding: 1rem 1.5rem; }
+    @media (min-width: 640px) { .site-header { padding: 1.1rem 2.5rem; } }
+    @media (min-width: 1024px) {
+      .header-nav {
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.14);
+        backdrop-filter: blur(10px);
+        padding: 0.6rem 1.4rem;
+        border-radius: var(--radius-pill);
+        gap: 1.5rem;
+      }
+    }
+    @media (min-width: 1024px) and (max-width: 1180px) {
+      .header-nav a:nth-child(5) { display: none; }
+    }
+
+    .hero-content-wrap { padding: 1rem 1.5rem 2.5rem; gap: 2.25rem; }
+    @media (min-width: 1024px) {
+      .hero-content-wrap { grid-template-columns: 1.25fr 0.85fr; padding: 1.5rem 3rem 3rem; gap: 4rem; }
+    }
+    .hero-left-col { gap: 1.35rem; }
+    .hero-main-title { font-size: clamp(2.1rem, 4.6vw, 4rem); line-height: 1.05; }
+    .hero-main-title .highlight-gold {
+      display: block;
+      background: linear-gradient(90deg, #d69a5c, #c4843f 50%, #f3d2ac);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: none;
+    }
+    .hero-subtitle { max-width: 34rem; font-size: clamp(1rem, 1.5vw, 1.15rem); color: rgba(255,255,255,.88); }
+
+    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .hero-cta-row .cta-btn-gold { padding: 0.95rem 1.8rem; font-size: 0.92rem; }
+    .hero-cta-row .cta-btn-outline { padding: 0.85rem 1.6rem; font-size: 0.92rem; }
+
+    .hero-trust-row { display: flex; align-items: center; gap: 0.9rem; }
+    .hero-trust-row p { font-size: 0.8rem; color: rgba(255,255,255,.75); line-height: 1.4; }
+    .hero-trust-row strong { color: #fff; font-weight: 700; }
+    .avatar-stack { display: flex; flex-shrink: 0; }
+    .avatar-stack img {
+      width: 2.4rem; height: 2.4rem; border-radius: 50%; object-fit: cover;
+      border: 2px solid #27208c; margin-left: -0.6rem; background: #3a3399;
+    }
+    .avatar-stack img:first-child { margin-left: 0; }
+
+    .hero-proof-stats {
+      gap: 0.75rem; border-top: none; padding-top: 0.25rem;
+    }
+    .proof-stat-item {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-lg);
+      padding: 0.9rem 1rem;
+      backdrop-filter: blur(6px);
+    }
+    .proof-stat-lbl { font-size: 0.75rem; margin-top: 0.25rem; }
+
+    /* Solid, high-contrast form card */
+    .hero-glass-form-card {
+      background: #ffffff;
+      border: none;
+      color: var(--ink);
+      padding: 1.75rem;
+      box-shadow: 0 30px 70px -20px rgba(5, 2, 25, 0.7);
+      animation: floatIn 900ms cubic-bezier(.16,1,.3,1) both 300ms;
+    }
+    .hero-glass-form-card::before {
+      top: 0; left: 0; right: 0; height: 5px; width: auto;
+      background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
+    }
+    .form-header { margin-bottom: 1.1rem; }
+    .form-header-badge { color: var(--brand-accent-hover); }
+    .form-header-title { color: var(--brand-deep); font-size: 1.55rem; }
+    .form-header-sub { color: var(--ink-soft); }
+    .hero-form { gap: 0.8rem; }
+    .glass-label { color: #43372f; }
+    .glass-input, .glass-select { background: var(--surface); border: 1px solid #e8d5c4; }
+    .glass-input:focus, .glass-select:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(39, 32, 140,.15); }
+    .form-guarantee-note { color: var(--ink-soft); }
+    .form-success-message h3 { color: var(--brand-deep) !important; }
+    .form-success-message p { color: var(--ink-soft) !important; }
+    @keyframes floatIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- Sticky compact header ---------- */
+    .sticky-nav {
+      position: fixed; top: 0.6rem; left: 50%; z-index: 90;
+      width: min(72rem, calc(100% - 1.2rem));
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.5rem 0.6rem 0.5rem 1.1rem;
+      background: rgba(23, 18, 90, 0.88);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 12px 30px rgba(14, 10, 48,.3);
+      transform: translate(-50%, -140%);
+      transition: transform 450ms cubic-bezier(.16,1,.3,1);
+      color: #fff;
+    }
+    .sticky-nav.show { transform: translate(-50%, 0); }
+    .sticky-logo { height: 2.1rem; width: auto; }
+    .sticky-links { display: none; gap: 1.6rem; font-size: 0.85rem; font-weight: 600; }
+    .sticky-links a { color: rgba(255,255,255,.85); transition: color 200ms; }
+    .sticky-links a:hover { color: var(--brand-accent); }
+    @media (min-width: 900px) { .sticky-links { display: flex; } }
+    .sticky-nav .header-cta-btn { display: inline-flex; padding: 0.55rem 1.15rem; font-size: 0.78rem; }
+
+    /* ---------- Recruiter marquee ---------- */
+    .recruiter-strip { padding: 1.75rem 0; border-bottom: none; background: transparent; }
+    .recruiter-strip-inner { gap: 1rem; max-width: none; }
+    .recruiter-strip-title { font-size: 0.72rem; }
+    .recruiter-marquee {
+      width: 100%; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    }
+    .recruiter-track { display: inline-flex; white-space: nowrap; animation: marquee 38s linear infinite; }
+    .recruiter-marquee:hover .recruiter-track { animation-play-state: paused; }
+    .recruiter-tag {
+      font-size: 1.05rem; color: #6e6058; padding: 0.55rem 1.4rem; margin: 0 0.4rem;
+      border: 1px solid var(--hairline); border-radius: var(--radius-pill); background: #fff;
+    }
+
+    /* ---------- Section spacing: remove the double gaps ---------- */
+    .why-choose-section, .courses-section, .advantage-section,
+    .facilities-section, .industry-speak-section, .alumni-section {
+      padding: 3.25rem 1.25rem;
+      border-radius: var(--radius-card-lg);
+    }
+    @media (min-width: 640px) {
+      .why-choose-section, .courses-section, .advantage-section,
+      .facilities-section, .industry-speak-section, .alumni-section {
+        padding: 4.25rem 2.5rem;
+      }
+    }
+    .section-header-center { margin-bottom: 2.25rem; }
+    .advantage-grid, .facilities-grid-3, .industry-speak-grid, .alumni-grid { margin-top: 0; }
+    .courses-tabs-nav { margin-bottom: 2rem; }
+    .why-choose-grid { gap: 2.75rem; }
+    .why-choose-content { gap: 1rem; }
+    .why-choose-pillars { gap: 0.9rem; margin-top: 0.5rem; }
+    .why-pillar-card { padding: 1.2rem; gap: 0.55rem; }
+    .section-eyebrow::before {
+      content: ""; width: 1.6rem; height: 2px; background: var(--brand-accent); display: inline-block;
+    }
+    .section-header-center .section-eyebrow::after {
+      content: ""; width: 1.6rem; height: 2px; background: var(--brand-accent); display: inline-block;
+    }
+    .mid-page-cta { margin: 0.75rem 0; padding: 3.25rem 1.5rem; }
+    @media (min-width: 640px) { .mid-page-cta { margin: 0.75rem 0; padding: 4rem 3rem; } }
+    .mid-cta-inner { gap: 1.1rem; }
+    .mid-cta-perks { margin-top: 0.5rem; }
+    .site-footer { margin-top: 0.75rem; }
+
+    /* Why-choose image: fixed aspect so it always looks crisp */
+    .why-choose-media-img img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; }
+    @media (max-width: 1023px) { .why-choose-media-img img { aspect-ratio: 16 / 10; } }
+
+    /* ---------- Courses: clearly visible images ---------- */
+    .course-card-img-wrap { height: auto; aspect-ratio: 16 / 10.5; background: #f3e4d6; }
+    .course-card-img-wrap::after {
+      content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
+      background: linear-gradient(180deg, transparent, rgba(14, 10, 48,.55));
+      pointer-events: none;
+    }
+    .course-card-badge, .course-card-duration { z-index: 2; }
+    .course-card-badge { background: rgba(255,255,255,.95); color: var(--brand-primary); }
+    .course-card-duration { background: rgba(18, 14, 64,.7); }
+    .course-card-body { padding: 1.4rem; gap: 1rem; }
+    .course-title { font-size: 1.25rem; }
+    .course-highlights { padding-top: 0.8rem; }
+    .course-card-footer { padding-top: 1rem; }
+    .tab-pane.active { gap: 1.5rem; }
+
+    /* ---------- Section rhythm: dark Industry Speak band ---------- */
+    .industry-speak-section {
+      background: radial-gradient(circle at 85% 10%, rgba(196, 132, 63,.16), transparent 40%), var(--brand-deep);
+    }
+    .industry-speak-section .section-title { color: #fff; }
+    .industry-speak-section .section-desc { color: rgba(255,255,255,.75); }
+    .industry-speak-section .section-eyebrow { color: var(--brand-accent); }
+    .industry-speak-card { background: #fff; border: none; }
+    .speak-img-wrap { height: 16rem; }
+    .speak-img-wrap img { object-position: center 20%; }
+
+    /* Advantage cards: livelier hover */
+    .advantage-grid { gap: 1rem; }
+    .advantage-item-card { padding: 1.3rem; position: relative; overflow: hidden; }
+    .advantage-item-card::after {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--brand-accent); transform: scaleY(0); transform-origin: bottom;
+      transition: transform 300ms ease;
+    }
+    .advantage-item-card:hover::after { transform: scaleY(1); }
+    .advantage-item-card:hover .advantage-badge-num { background: var(--brand-accent); color: var(--brand-deep); }
+    .advantage-badge-num { transition: background 250ms, color 250ms; }
+
+    .facilities-grid-3, .industry-speak-grid { gap: 1.5rem; }
+    .facility-content, .speak-card-body { padding: 1.4rem; }
+    .alumni-grid { gap: 1rem; }
+    .alumni-card { padding: 1.3rem; }
+
+    /* ---------- Scroll reveal ---------- */
+    .js-reveal .reveal { opacity: 0; transform: translateY(26px); transition: opacity 700ms cubic-bezier(.16,1,.3,1), transform 700ms cubic-bezier(.16,1,.3,1); transition-delay: var(--d, 0ms); }
+    .js-reveal .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+      .top-ticker-track, .recruiter-track, .pulse-dot::after { animation: none; }
+    }
+
+    .swipe-hint {
+      display: none; align-items: center; justify-content: center; gap: 0.4rem;
+      font-size: 0.72rem; font-weight: 600; color: var(--ink-soft); margin-top: 0.25rem;
+    }
+    .industry-speak-section .swipe-hint { color: rgba(255,255,255,.6); }
+
+    /* ---------- Mobile CTA bar ---------- */
+    .mobile-cta-bar { display: none; }
+
+    /* ==========================================================================
+       MOBILE
+       ========================================================================== */
+    @media (max-width: 767px) {
+      main { padding: 0.4rem; }
+
+      /* Top strip: one compact row */
+      .top-announcement-bar { padding: 0.5rem 0.9rem; gap: 0.6rem; justify-content: space-between; }
+      .top-ticker, .top-bar-mail { display: none !important; }
+      .top-bar-phone span { font-size: 0.75rem; }
+      .top-badge-pulse { font-size: 0.62rem; padding: 0.28rem 0.6rem; }
+
+      .site-header { padding: 0.85rem 0.9rem; }
+      .header-logo-img { height: 2.4rem; }
+      .burger-btn { width: 2.5rem; height: 2.5rem; }
+
+      .hero-content-wrap { padding: 0.5rem 1rem 1.25rem; gap: 1.5rem; }
+      .hero-left-col { gap: 1rem; }
+      .hero-prestige-badge { font-size: 0.66rem; padding: 0.38rem 0.75rem; }
+      .hero-main-title { font-size: 2.05rem; }
+      .hero-subtitle { font-size: 0.95rem; }
+      .hero-cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .hero-cta-row > * { justify-content: center; padding: 0.85rem 0.6rem !important; font-size: 0.8rem !important; }
+      .hero-trust-row p { font-size: 0.74rem; }
+      .avatar-stack img { width: 2.1rem; height: 2.1rem; }
+      .hero-proof-stats { gap: 0.5rem; }
+      .proof-stat-item { padding: 0.7rem 0.6rem; border-radius: var(--radius-md); }
+      .proof-stat-val { font-size: 1.35rem; }
+      .proof-stat-lbl { font-size: 0.66rem; }
+      .hero-glass-form-card { padding: 1.35rem 1.1rem; border-radius: var(--radius-lg); }
+      .form-header-title { font-size: 1.3rem; }
+
+      .recruiter-strip { padding: 1.25rem 0; }
+      .recruiter-tag { font-size: 0.85rem; padding: 0.45rem 1rem; }
+
+      .why-choose-section, .courses-section, .advantage-section,
+      .facilities-section, .industry-speak-section, .alumni-section {
+        padding: 2.5rem 1rem; border-radius: var(--radius-card);
+      }
+      .section-header-center { margin-bottom: 1.5rem; }
+      .section-title { font-size: 1.7rem; }
+      .section-desc { font-size: 0.92rem; margin-top: 0.6rem; }
+      .why-floating-card { padding: 1.1rem 1.4rem; }
+      .why-pillar-card { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 0.75rem; }
+      .why-pillar-card .pillar-text { flex-basis: 100%; }
+
+      /* Tabs fit the screen */
+      .courses-tabs-nav { margin-bottom: 1.25rem; }
+      .tabs-pill-container { width: 100%; }
+      .tab-btn { flex: 1; justify-content: center; padding: 0.75rem 0.5rem; font-size: 0.85rem; }
+      .tab-btn-badge { display: none; }
+
+      /* Swipeable carousels instead of tall stacks */
+      .tab-pane.active, .facilities-grid-3, .industry-speak-grid, .alumni-grid {
+        display: flex; grid-template-columns: none;
+        overflow-x: auto; scroll-snap-type: x mandatory;
+        gap: 0.85rem;
+        margin: 0 -1rem; padding: 0.25rem 1rem 1rem;
+        scrollbar-width: none; -webkit-overflow-scrolling: touch;
+      }
+      .tab-pane.active::-webkit-scrollbar, .facilities-grid-3::-webkit-scrollbar,
+      .industry-speak-grid::-webkit-scrollbar, .alumni-grid::-webkit-scrollbar { display: none; }
+      .tab-pane.active > *, .facilities-grid-3 > *, .industry-speak-grid > * { flex: 0 0 86%; scroll-snap-align: center; }
+      .alumni-grid > * { flex: 0 0 68%; scroll-snap-align: center; }
+      .course-card:hover, .facility-box:hover, .industry-speak-card:hover, .alumni-card:hover { transform: none; }
+      .swipe-hint { display: flex; }
+
+      .advantage-grid { gap: 0.6rem; }
+      .advantage-item-card { padding: 1rem; }
+      .advantage-card-content h3 { font-size: 1rem; }
+      .advantage-card-content p { font-size: 0.82rem; }
+      .advantage-tagline { font-size: 1rem; }
+
+      .mid-page-cta { padding: 2.5rem 1.1rem; border-radius: var(--radius-card); }
+      .mid-cta-actions { width: 100%; flex-direction: column; gap: 0.7rem; }
+      .mid-cta-actions > * { justify-content: center; width: 100%; }
+      .mid-cta-perks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; text-align: left; font-size: 0.75rem; }
+
+      .site-footer { padding: 2.75rem 1.25rem 6rem; border-radius: var(--radius-card); }
+      .footer-cols-grid { gap: 2rem; padding-bottom: 2rem; }
+
+      .sticky-nav { display: none; }
+      .mobile-cta-bar {
+        display: grid; grid-template-columns: 1fr 1.4fr; gap: 0.5rem;
+        position: fixed; left: 0.6rem; right: 0.6rem; bottom: 0.6rem; z-index: 95;
+        padding: 0.45rem;
+        background: rgba(23, 18, 90,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border-radius: var(--radius-pill);
+        box-shadow: 0 12px 30px rgba(14, 10, 48,.4);
+        transform: translateY(160%); transition: transform 400ms cubic-bezier(.16,1,.3,1);
+      }
+      .mobile-cta-bar.show { transform: none; }
+      .mcb-call, .mcb-apply {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+        padding: 0.8rem; border-radius: var(--radius-pill); font-size: 0.85rem; font-weight: 700;
+      }
+      .mcb-call { color: #fff; border: 1px solid rgba(255,255,255,.25); }
+      .mcb-apply { background: var(--brand-accent); color: var(--brand-deep); text-transform: uppercase; letter-spacing: .04em; }
+    }
+
+    /* ---------- Decluttered hero tweaks ---------- */
+    .top-announcement-bar { justify-content: space-between; }
+    .hero-left-col { gap: 1.5rem; }
+    .hero-subtitle { max-width: 30rem; }
+    .hero-proof-stats { max-width: 34rem; margin-top: 0.5rem; }
+    .hero-bg-inner img { object-position: 60% 30%; }
+    .facility-img-wrap img, .course-card-img { image-rendering: auto; }
+    .why-choose-media-img img { aspect-ratio: 3 / 2.4; object-position: center 30%; }
+    @media (max-width: 1023px) { .why-choose-media-img img { aspect-ratio: 3 / 2; } }
+
+    /* ==========================================================================
+       WARM THEME — palette taken from the Indian IHM "Small Aprons" post:
+       peach cream, logo indigo, caramel bronze, signal red
+       ========================================================================== */
+    :root {
+      --brand-primary: #27208c;
+      --brand-deep: #17125a;
+      --brand-light: #4a43b8;
+      --brand-accent: #c4843f;
+      --brand-accent-hover: #a8692c;
+      --brand-accent-soft: #f3d2ac;
+      --brand-red: #e3262b;
+      --peach: #f6e4d6;
+      --peach-deep: #efd3bf;
+      --cream: #fffaf5;
+      --background: #f4e5d9;
+      --foreground: #1f1814;
+      --surface: #fbf4ee;
+      --surface-alt: #f6e9dd;
+      --ink: #1f1814;
+      --ink-soft: #6e6058;
+      --hairline: #eddccd;
+    }
+    body {
+      background:
+        radial-gradient(1200px 600px at 10% -5%, #fbefe5 0%, transparent 60%),
+        var(--background);
+    }
+    .text-caramel { color: var(--brand-accent-hover); }
+    .section-eyebrow { color: var(--brand-primary); }
+    .section-title { color: var(--brand-deep); }
+
+    /* Section surfaces: cream cards on the peach page */
+    .why-choose-section, .advantage-section { background: var(--cream); }
+    .courses-section, .facilities-section, .alumni-section {
+      background: linear-gradient(180deg, #fbf1e8 0%, #f8eadf 100%);
+    }
+    .why-pillar-card, .advantage-item-card { background: #fff; }
+    .course-card, .facility-box, .alumni-card { background: #fff; border-color: #f0e2d6; }
+    .course-card-badge { color: var(--brand-primary); }
+    .apply-course-btn { background: var(--brand-primary); }
+    .apply-course-btn:hover { background: var(--brand-accent-hover); }
+    .tab-btn.active { background: var(--brand-primary); }
+    .recruiter-tag { background: var(--cream); border-color: #ecd9c8; color: #6e6058; }
+    .recruiter-tag:hover { color: var(--brand-accent-hover); }
+    .why-floating-card { background: var(--brand-primary); }
+    .floating-card-num { color: var(--brand-accent-soft); }
+
+    /* Caramel buttons: white text, bronze gradient */
+    .cta-btn-gold, .header-cta-btn, .form-submit-btn, .mcb-apply {
+      background: linear-gradient(135deg, #cf9254 0%, #a8692c 100%);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(168, 105, 44, 0.35);
+    }
+    .cta-btn-gold:hover, .header-cta-btn:hover {
+      background: linear-gradient(135deg, #d9a165 0%, #b5763a 100%);
+      box-shadow: 0 12px 28px rgba(168, 105, 44, 0.45);
+    }
+    .top-badge-pulse { background: var(--brand-red); color: #fff; }
+    .pulse-dot, .pulse-dot::after { background: #fff; }
+
+    /* Hero: indigo with warm light, caramel headline */
+    .hero-bg-inner::after {
+      background:
+        linear-gradient(90deg, rgba(23, 18, 90, 0.96) 0%, rgba(27, 21, 105, 0.86) 45%, rgba(23, 18, 90, 0.55) 100%),
+        linear-gradient(180deg, rgba(14, 10, 48, 0.15) 0%, rgba(14, 10, 48, 0.6) 100%);
+    }
+    .hero-section::after { background: radial-gradient(circle, rgba(246, 210, 175, 0.22), transparent 60%); }
+    .hero-main-title .highlight-gold {
+      background: linear-gradient(90deg, #f3d2ac 0%, #d69a5c 50%, #e9bb8a 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-prestige-badge { background: rgba(246, 210, 175, 0.12); border-color: rgba(246, 210, 175, 0.35); color: #f3d2ac; }
+    .hero-prestige-badge svg { color: #e9bb8a; }
+    .proof-stat-val { color: #f0c896; }
+    .hero-glass-form-card::before { background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent), var(--brand-red)); }
+    .form-header-title { color: var(--brand-deep); }
+
+    /* ---------- Glassmorphism nav (desktop) ---------- */
+    @media (min-width: 1024px) {
+      .site-header {
+        margin: 0.9rem 1.5rem 0;
+        padding: 0.55rem 0.6rem 0.55rem 1.3rem;
+        width: auto;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+        backdrop-filter: blur(18px) saturate(150%);
+        -webkit-backdrop-filter: blur(18px) saturate(150%);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: var(--radius-pill);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 12px 32px rgba(8, 5, 35, 0.25);
+      }
+      .header-nav { background: none; border: none; padding: 0; backdrop-filter: none; gap: 2rem; }
+      .header-nav a { color: rgba(255, 255, 255, 0.9); padding: 0.35rem 0; }
+      .header-nav a::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px;
+        background: var(--brand-accent); transform: scaleX(0); transition: transform 250ms ease;
+      }
+      .header-nav a:hover { color: #fff; }
+      .header-nav a:hover::after { transform: scaleX(1); }
+      .header-logo-img { height: 2.7rem; }
+      .burger-btn { display: none; }
+      .hero-content-wrap { padding-top: 2.25rem; }
+    }
+    /* Sticky nav: light frosted glass with the coloured logo */
+    .sticky-nav {
+      background: rgba(255, 249, 243, 0.62);
+      backdrop-filter: blur(18px) saturate(170%);
+      -webkit-backdrop-filter: blur(18px) saturate(170%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 12px 34px rgba(60, 35, 15, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      color: var(--brand-deep);
+    }
+    .sticky-links a { color: var(--brand-deep); }
+    .sticky-links a:hover { color: var(--brand-accent-hover); }
+    .sticky-logo { height: 2.2rem; }
+
+    /* ---------- Numbers mosaic ---------- */
+    .numbers-section {
+      background:
+        radial-gradient(circle at 1px 1px, rgba(39, 32, 140, 0.07) 1px, transparent 0) 0 0 / 22px 22px,
+        var(--cream);
+      border-radius: var(--radius-card-lg);
+      padding: 3.5rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+    @media (min-width: 640px) { .numbers-section { padding: 4rem 2.5rem; } }
+    .numbers-grid {
+      max-width: 62rem; margin: 0 auto;
+      display: grid; gap: 0.6rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "head head a"
+        "note b c"
+        "d e f";
+    }
+    .numbers-head { align-self: end; padding: 0 1.5rem 1.25rem 0; }
+    .numbers-head .section-title { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
+    .numbers-note { align-self: center; padding-right: 1rem; }
+    .numbers-note p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.55; }
+    .numbers-link { margin-top: 0.75rem; font-weight: 700; font-size: 0.9rem; color: var(--brand-accent-hover); }
+    .numbers-link:hover { color: var(--brand-primary); }
+    .num-tile {
+      border-radius: 1.1rem; padding: 1.35rem 1.4rem; min-height: 10.5rem;
+      display: flex; flex-direction: column; justify-content: flex-end; gap: 0.2rem;
+      position: relative; overflow: hidden;
+      transition: transform 300ms cubic-bezier(.16,1,.3,1), box-shadow 300ms ease;
+    }
+    .num-tile:hover { transform: translateY(-4px); box-shadow: 0 18px 34px rgba(39, 32, 140, 0.18); }
+    .num-icon {
+      position: absolute; top: 1.2rem; left: 1.4rem; width: 1.6rem; height: 1.6rem;
+    }
+    .num-icon svg { width: 100%; height: 100%; }
+    .num-pre { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; }
+    .num-val { font-family: "Outfit", sans-serif; font-size: clamp(2.1rem, 3.6vw, 2.9rem); font-weight: 800; line-height: 1; }
+    .num-lbl { font-size: 0.92rem; font-weight: 500; }
+    .num-indigo { background: var(--brand-primary); color: #fff; }
+    .num-indigo .num-icon { color: var(--brand-accent-soft); }
+    .num-caramel { background: linear-gradient(150deg, #cf9254, #a8692c); color: #fff; }
+    .num-cream { background: var(--peach); color: var(--brand-deep); }
+    .num-cream .num-icon { color: var(--brand-accent-hover); }
+    .num-tile::after {
+      content: ""; position: absolute; width: 9rem; height: 9rem; right: -3rem; top: -3rem; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    /* ---------- CTA: warm peach with student cutout ---------- */
+    .mid-page-cta {
+      background: linear-gradient(135deg, #fbeadd 0%, #f5dcc8 55%, #eecdb4 100%);
+      color: var(--ink);
+      box-shadow: 0 20px 50px rgba(120, 70, 30, 0.12);
+      padding-bottom: 0 !important;
+    }
+    .mid-page-cta::before { display: none; }
+    .cta-rays {
+      position: absolute; inset: 0; pointer-events: none;
+      background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0) 0 46px, rgba(255, 255, 255, 0.35) 46px 60px);
+      mask-image: radial-gradient(ellipse at 0% 0%, #000 0%, transparent 55%);
+      -webkit-mask-image: radial-gradient(ellipse at 0% 0%, #000 0%, transparent 55%);
+    }
+    .mid-cta-grid {
+      position: relative; z-index: 2; max-width: 68rem; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr; align-items: end; gap: 1rem;
+    }
+    @media (min-width: 900px) { .mid-cta-grid { grid-template-columns: 1.35fr 0.65fr; gap: 2rem; } }
+    .mid-cta-inner { padding-bottom: 3.25rem; }
+    @media (min-width: 900px) {
+      .mid-cta-inner { text-align: left; align-items: flex-start; margin: 0; padding-bottom: 4rem; }
+      .mid-cta-actions, .mid-cta-perks { justify-content: flex-start; }
+    }
+    .mid-cta-badge { background: rgba(227, 38, 43, 0.08); border-color: rgba(227, 38, 43, 0.3); color: var(--brand-red); }
+    .mid-cta-badge svg { color: var(--brand-red); }
+    .mid-cta-title { color: var(--brand-deep); }
+    .mid-cta-title span { color: var(--brand-accent-hover); }
+    .mid-cta-desc { color: #5b4a3f; }
+    .cta-btn-outline { border-color: rgba(255, 255, 255, 0.35); }
+    .mid-page-cta .cta-btn-outline { color: var(--brand-deep); border-color: rgba(23, 18, 90, 0.3); }
+    .mid-page-cta .cta-btn-outline:hover { background: rgba(23, 18, 90, 0.06); border-color: var(--brand-deep); }
+    .mid-cta-perks { color: #5b4a3f; }
+    .mid-cta-perk svg { color: var(--brand-accent-hover); }
+
+    .cta-cutout { position: relative; display: flex; justify-content: center; align-items: flex-end; height: 100%; min-height: 300px; }
+    .cta-student {
+      position: relative; z-index: 2; height: 440px; width: auto; max-width: none;
+      filter: drop-shadow(0 18px 24px rgba(90, 50, 20, 0.25));
+    }
+    /* Chef silhouette shadow, like the post */
+    .cta-shadow {
+      position: absolute; z-index: 1; bottom: 0; left: 50%;
+      height: 480px; width: auto; max-width: none;
+      transform: translateX(-8%);
+      filter: brightness(0) sepia(1) saturate(3) hue-rotate(-10deg) blur(1.5px);
+      opacity: 0.18;
+    }
+
+    /* ---------- Advantage: sticky intro + numbered list ---------- */
+    .advantage-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 1024px) {
+      .advantage-layout { grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items: start; }
+      .advantage-intro { position: sticky; top: 6rem; }
+    }
+    .advantage-intro { display: flex; flex-direction: column; gap: 0.9rem; }
+    .adv-visual {
+      margin-top: 0.75rem; border-radius: var(--radius-card);
+      background: radial-gradient(circle at 80% 0%, rgba(207, 146, 84, 0.45), transparent 55%), var(--brand-primary);
+      color: #fff; position: relative; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: end; min-height: 15rem;
+    }
+    .adv-visual-text { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; align-self: center; position: relative; z-index: 2; }
+    .adv-visual-kicker { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-accent-soft); }
+    .adv-visual-text strong { font-family: "Outfit", sans-serif; font-size: 1.3rem; line-height: 1.2; }
+    .adv-visual-text .cta-btn-gold { padding: 0.7rem 1.2rem; font-size: 0.8rem; align-self: flex-start; margin-top: 0.4rem; }
+    .adv-visual img { width: 130%; max-width: none; margin-left: -20%; align-self: end; }
+
+    .adv-list { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+    @media (min-width: 640px) { .adv-list { grid-template-columns: 1fr 1fr; } }
+    .adv-item {
+      position: relative; overflow: hidden;
+      background: #fff; border: 1px solid var(--hairline); border-radius: 1.1rem;
+      padding: 1.25rem 1.25rem 1.2rem;
+      transition: background 300ms ease, transform 300ms cubic-bezier(.16,1,.3,1), box-shadow 300ms ease, border-color 300ms ease;
+    }
+    .adv-num {
+      display: block; font-family: "Outfit", sans-serif; font-weight: 800; font-size: 2rem; line-height: 1;
+      color: transparent; -webkit-text-stroke: 1.3px var(--brand-accent); margin-bottom: 0.6rem;
+      transition: color 300ms ease;
+    }
+    .adv-item h3 { font-size: 1.02rem; font-weight: 700; color: var(--brand-deep); margin-bottom: 0.3rem; transition: color 300ms; }
+    .adv-item p { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.55; transition: color 300ms; }
+    .adv-item:hover {
+      background: var(--brand-primary); border-color: var(--brand-primary);
+      transform: translateY(-4px); box-shadow: 0 18px 34px rgba(39, 32, 140, 0.22);
+    }
+    .adv-item:hover .adv-num { color: var(--brand-accent-soft); -webkit-text-stroke-color: var(--brand-accent-soft); }
+    .adv-item:hover h3 { color: #fff; }
+    .adv-item:hover p { color: rgba(255, 255, 255, 0.8); }
+
+    /* Dark band + footer in the new indigo */
+    .industry-speak-section {
+      background: radial-gradient(circle at 85% 10%, rgba(207, 146, 84, 0.22), transparent 40%), var(--brand-deep);
+    }
+    .industry-speak-section .section-eyebrow { color: var(--brand-accent-soft); }
+    .speak-author { color: var(--brand-deep); }
+    .speak-author-role, .alumni-placement { color: var(--brand-accent-hover); }
+    .site-footer { background: var(--brand-deep); }
+    .footer-nav-col h3 { color: var(--brand-accent-soft); }
+    .mobile-cta-bar { background: rgba(23, 18, 90, 0.92); }
+
+    @media (max-width: 899px) {
+      .cta-cutout { min-height: 0; }
+      .cta-student { height: 300px; }
+      .cta-shadow { height: 330px; }
+      .mid-cta-inner { padding-bottom: 0.5rem; }
+    }
+    @media (max-width: 767px) {
+      .numbers-section { border-radius: var(--radius-card); padding: 2.5rem 1rem; }
+      .numbers-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "head head" "a b" "c d" "e f" "note note";
+      }
+      .numbers-head { padding: 0 0 0.75rem; text-align: center; }
+      .numbers-head .section-title { font-size: 1.7rem; }
+      .numbers-note { text-align: center; padding: 0.75rem 0 0; }
+      .num-tile { min-height: 8.5rem; padding: 1rem; }
+      .num-icon { top: 0.9rem; left: 1rem; width: 1.35rem; height: 1.35rem; }
+      .num-val { font-size: 1.9rem; }
+      .num-lbl { font-size: 0.8rem; }
+      .adv-visual { min-height: 12rem; }
+      .adv-visual-text strong { font-size: 1.1rem; }
+      .adv-item { padding: 1rem; display: grid; grid-template-columns: auto 1fr; column-gap: 0.9rem; }
+      .adv-num { grid-row: span 2; margin: 0; font-size: 1.7rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       INTRO LOADER (With Indian IHM Brand Insignia & Smooth Progress)
+       ========================================================================== -->
+  <div id="intro-loader" aria-hidden="false">
+    <div class="loader-logo-wrap" id="loader-logo">
+      <img src="https://indianihm.com/wp-content/uploads/2022/12/logo_white.png" alt="Indian Institute of Hotel Management Logo" class="loader-logo-img">
+    </div>
+    <div class="loader-progress-track">
+      <div class="loader-progress-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main>
+
+    <!-- ========================================================================
+         HERO SECTION (High-Contrast, Readable Typography & Glassmorphism Form)
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Parallax Background Plate with Real indianihm.com Campus Banner -->
+      <div class="hero-bg-parallax">
+        <div class="hero-bg-inner" id="hero-bg-inner">
+          <img 
+            src="https://indianihm.com/wp-content/uploads/2024/12/hospital-courses-banner302.jpg" 
+            alt="Indian Institute of Hotel Management Students and Campus" 
+            fetchpriority="high"
+            loading="eager"
+          >
+        </div>
+      </div>
+
+      <!-- Top Announcement Strip (inside hero) -->
+      <div class="top-announcement-bar">
+        <span class="top-badge-pulse"><i class="pulse-dot"></i>Admissions Open 2026-27</span>
+        <div class="top-bar-right">
+          <a href="tel:+919051475838" class="top-bar-phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 90514 75838</span>
+          </a>
+          <a href="mailto:admission@indianihm.com" class="top-bar-mail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>admission@indianihm.com</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Header Navigation -->
+      <header class="site-header">
+        <a href="#hero" class="header-logo-link">
+          <img src="https://indianihm.com/wp-content/uploads/2022/12/logo_white.png" alt="Indian IHM Logo" class="header-logo-img">
+        </a>
+
+        <nav class="header-nav">
+          <a href="#courses">Programmes</a>
+          <a href="#why-choose-us">Why Us</a>
+          <a href="#facilities">Campus</a>
+          <a href="#alumni">Alumni</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+          <button class="header-cta-btn open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">
+            <span>Apply Online</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="burger-btn" id="open-menu-btn" aria-label="Open navigation menu" type="button">
+            <div class="burger-bars">
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Main Content Grid: High-Contrast Headlines (Left) + Glassmorphism Form (Right) -->
+      <div class="hero-content-wrap">
+        
+        <!-- Left Column: Clear, High-Contrast Editorial Headings -->
+        <div class="hero-left-col">
+          <div class="hero-prestige-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>#1 Hotel Management Institute in Kolkata</span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Build a Global Career in
+            <span class="highlight-gold">Hospitality &amp; Healthcare</span>
+            Management
+          </h1>
+
+          <p class="hero-subtitle">
+            Bachelor&rsquo;s and Master&rsquo;s degrees in hotel, culinary and hospital management &mdash; Salt Lake, Kolkata.
+          </p>
+
+          <div class="hero-cta-row">
+            <button class="cta-btn-gold open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">
+              <span>Apply Now</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#courses" class="cta-btn-outline">
+              <span>Explore Programmes</span>
+            </a>
+          </div>
+
+          <!-- Proof Metrics Strip -->
+          <div class="hero-proof-stats">
+            <div class="proof-stat-item">
+              <span class="proof-stat-val" data-count="9000" data-suffix="+">9000+</span>
+              <span class="proof-stat-lbl">Global placements</span>
+            </div>
+            <div class="proof-stat-item">
+              <span class="proof-stat-val" data-count="100" data-suffix="%">100%</span>
+              <span class="proof-stat-lbl">Industrial training</span>
+            </div>
+            <div class="proof-stat-item">
+              <span class="proof-stat-val" data-count="20" data-suffix="+">20+</span>
+              <span class="proof-stat-lbl">Years of excellence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: High-Converting Glassmorphism Admission Form -->
+        <div class="hero-glass-form-card">
+          <div class="form-header">
+            <h2 class="form-header-title">Apply for Admission 2026</h2>
+            <p class="form-header-sub">Get fees, syllabus &amp; scholarship details.</p>
+          </div>
+
+          <form class="hero-form" id="hero-admission-form">
+            <div class="glass-input-group">
+              <label class="glass-label" for="hero-name">Full Name *</label>
+              <input type="text" id="hero-name" class="glass-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="glass-input-group">
+              <label class="glass-label" for="hero-phone">Mobile Number *</label>
+              <input type="tel" id="hero-phone" class="glass-input" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="glass-input-group">
+              <label class="glass-label" for="hero-email">Email Address *</label>
+              <input type="email" id="hero-email" class="glass-input" placeholder="rahul@example.com" required>
+            </div>
+
+            <div class="glass-input-group">
+              <label class="glass-label" for="hero-course">Programme *</label>
+              <select id="hero-course" class="glass-select" required>
+                <optgroup label="Bachelor Degree Programs (3 Years)">
+                  <option value="Bachelor in Hospital Management">Bachelor in Hospital Management</option>
+                  <option value="Bachelor in Hospitality Management" selected>Bachelor in Hospitality Management</option>
+                  <option value="Bachelor in Culinary Management">Bachelor in Culinary Management</option>
+                </optgroup>
+                <optgroup label="Masters & MBA Programs (2 Years)">
+                  <option value="Masters / MBA in Hospital Management">Masters / MBA in Hospital Management</option>
+                  <option value="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</option>
+                  <option value="Masters in Culinary Management">Masters in Culinary Management</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="hero-submit-btn">
+              <span>Get Free Counselling</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="form-guarantee-note">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              <span>Your details stay confidential</span>
+            </div>
+          </form>
+
+          <!-- Form Success State -->
+          <div class="form-success-message" id="hero-form-success">
+            <div class="success-icon-circ">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; color: #ffffff;">Application Received!</h3>
+            <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.9);" id="hero-success-text">
+              Thank you! Our Academic Counselor will call you within 2 business hours with course details.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         RECRUITER & PLACEMENT LOGO STRIP
+         ======================================================================== -->
+    <section class="recruiter-strip" id="recruiters">
+      <div class="recruiter-strip-inner">
+        <h3 class="recruiter-strip-title">Our students train &amp; get placed at</h3>
+        <div class="recruiter-marquee">
+          <div class="recruiter-track"><span class="recruiter-tag">TAJ HOTELS</span><span class="recruiter-tag">THE OBEROI GROUP</span><span class="recruiter-tag">MARRIOTT INTERNATIONAL</span><span class="recruiter-tag">HYATT REGENCY</span><span class="recruiter-tag">ITC HOTELS</span><span class="recruiter-tag">THE LEELA PALACES</span><span class="recruiter-tag">APOLLO HOSPITALS</span><span class="recruiter-tag">FORTIS HEALTHCARE</span><span class="recruiter-tag">CARNIVAL CRUISE LINE</span><span class="recruiter-tag">TAJ HOTELS</span><span class="recruiter-tag">THE OBEROI GROUP</span><span class="recruiter-tag">MARRIOTT INTERNATIONAL</span><span class="recruiter-tag">HYATT REGENCY</span><span class="recruiter-tag">ITC HOTELS</span><span class="recruiter-tag">THE LEELA PALACES</span><span class="recruiter-tag">APOLLO HOSPITALS</span><span class="recruiter-tag">FORTIS HEALTHCARE</span><span class="recruiter-tag">CARNIVAL CRUISE LINE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         NEW SECTION: WHY CHOOSE US
+         ======================================================================== -->
+    <section class="why-choose-section" id="why-choose-us">
+      <div class="section-container">
+        
+        <div class="why-choose-grid">
+          
+          <div class="why-choose-content">
+            <div class="section-eyebrow">
+              <span>Why Choose Us</span>
+            </div>
+            <h2 class="section-title">
+              We Offer an Unrivaled Opportunity to Learn &amp; Work in the Heart of Hospitality
+            </h2>
+            <p class="section-desc">
+              Indian Institute of Hotel Management stands as Eastern India's pioneer hotel school, combining academic rigor with real-world exposure, high-tech campus infrastructure, and direct pathways to top international employers.
+            </p>
+
+            <div class="why-choose-pillars">
+              
+              <div class="why-pillar-card">
+                <div class="pillar-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="pillar-title">360&deg; Practical Grooming</h3>
+                <p class="pillar-text">
+                  Daily hands-on sessions in commercial kitchens, mock reception desks, and hospital simulation clinics under industry veterans.
+                </p>
+              </div>
+
+              <div class="why-pillar-card">
+                <div class="pillar-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3 class="pillar-title">Global Placements &amp; Internships</h3>
+                <p class="pillar-text">
+                  Direct recruitment tie-ups spanning the USA, UK, Italy, UAE, Maldives, and leading domestic hospitality and hospital chains.
+                </p>
+              </div>
+
+              <div class="why-pillar-card">
+                <div class="pillar-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 class="pillar-title">Celebrity Mentors &amp; Masterclasses</h3>
+                <p class="pillar-text">
+                  Direct masterclasses by culinary legends like Padma Shri Chef Sanjeev Kapoor, Chef Ranveer Brar, and Chef Balpreet Singh Chadha.
+                </p>
+              </div>
+
+              <div class="why-pillar-card">
+                <div class="pillar-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <h3 class="pillar-title">Prime Salt Lake Location</h3>
+                <p class="pillar-text">
+                  Situated in Kolkata's premier IT and commercial hub (Sector-V), seamlessly connected with metro, transit, and corporate hotels.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Image & Floating Accent Card -->
+          <div class="why-choose-media">
+            <div class="why-choose-media-img">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/home-2494.jpg" alt="Indian IHM hospitality students welcoming guests" loading="lazy">
+            </div>
+            <div class="why-floating-card">
+              <div class="floating-card-num">100%</div>
+              <div class="floating-card-lbl">Placement Track Record Across India &amp; Worldwide</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         COURSES SECTION WITH TABS (BACHELOR & MASTERS)
+         ======================================================================== -->
+    <section class="courses-section" id="courses">
+      <div class="section-container">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span>Specialized Academic Pathways</span>
+          </div>
+          <h2 class="section-title">Programmes Offered at Indian IHM</h2>
+          <p class="section-desc">
+            Industry-designed curricula with international hospitality exposure, state-of-the-art kitchen suites, and clinical hospital attachments.
+          </p>
+        </div>
+
+        <!-- Interactive Tabs Navigation -->
+        <div class="courses-tabs-nav">
+          <div class="tabs-pill-container" role="tablist">
+            <button class="tab-btn active" id="tab-bachelor-btn" role="tab" aria-selected="true" aria-controls="pane-bachelor" type="button">
+              <span>Bachelor Degrees</span>
+              <span class="tab-btn-badge">Undergraduate</span>
+            </button>
+            <button class="tab-btn" id="tab-masters-btn" role="tab" aria-selected="false" aria-controls="pane-masters" type="button">
+              <span>Masters / MBA</span>
+              <span class="tab-btn-badge">Postgraduate</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 1: Bachelor Programmes (From Attached Image) -->
+        <div class="tab-pane active" id="pane-bachelor" role="tabpanel">
+          
+          <!-- Bachelor Course 1: Hospital Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/02/home_image8.jpg" style="object-position:center 35%" alt="Hospital Management Students in healthcare training" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">BHA / BHM</span>
+              <span class="course-card-duration">3 Years &bull; Full-Time</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Bachelor in Hospital Management</h3>
+                <p class="course-excerpt">
+                  Demanding career pathway as the healthcare sector expands with worldwide opportunities. Covers hospital operations, patient-care systems, health informatics, and NABH hospital quality standards.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Clinical internships at Apollo &amp; Fortis</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Healthcare laws &amp; medical insurance systems</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Hospital administration &amp; patient logistics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Bachelor in Hospital Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bachelor Course 2: Hospitality Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/hospitality-leftimg-30.jpg" style="object-position:center 40%" alt="Hospitality Management student at Indian IHM" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">B.Sc Hospitality</span>
+              <span class="course-card-duration">3 Years &bull; Full-Time</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Bachelor in Hospitality Management</h3>
+                <p class="course-excerpt">
+                  Rigorous immersion into 5-star hotel operations, luxury front office, food &amp; beverage management, housekeeping leadership, and global tourism management with 100% placements.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Paid training at Taj, Oberoi &amp; Marriott</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Wine appreciation &amp; international concierge</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Global cruise liners placement eligibility</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bachelor Course 3: Culinary Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/home-1439.jpg" style="object-position:center 30%" alt="Culinary Arts Kitchen Lab at Indian IHM" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">B.Sc Culinary</span>
+              <span class="course-card-duration">3 Years &bull; Full-Time</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Bachelor in Culinary Management</h3>
+                <p class="course-excerpt">
+                  Master European classical cooking, bakery, confectionery, food science, and commercial restaurant kitchen administration under renowned master chefs and guest mentors.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>State-of-the-art commercial bakery suites</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Menu design &amp; food styling workshops</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>International airline &amp; luxury hotel catering</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Bachelor in Culinary Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Tab 2: Masters / MBA Programmes (From Attached Image) -->
+        <div class="tab-pane" id="pane-masters" role="tabpanel">
+          
+          <!-- Masters Course 1: Hospital Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2026/01/skills.webp" style="object-position:center 30%" alt="Masters in Hospital Management" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">MHM / MBA-HM</span>
+              <span class="course-card-duration">2 Years &bull; Postgraduate</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Masters / MBA in Hospital Management</h3>
+                <p class="course-excerpt">
+                  Executive preparation for high-ranking hospital directors, healthcare consultants, and corporate medical facility administrators. Focuses on health economics and hospital quality audits.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Hospital budgeting &amp; strategic management</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Telemedicine &amp; digital health records systems</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Direct recruitment in senior executive tiers</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Masters / MBA in Hospital Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Masters Course 2: Hospitality Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/hotel-couse-boximg30.webp" style="object-position:center 25%" alt="Masters in Hospitality Management at luxury property" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">MBA Hospitality</span>
+              <span class="course-card-duration">2 Years &bull; Postgraduate</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Masters / MBA in Hospitality Management</h3>
+                <p class="course-excerpt">
+                  Advanced leadership qualification for general managers, corporate revenue heads, and luxury resort executives. Equips students with international hospitality law and global marketing.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Global hotel asset &amp; revenue management</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Multinational resort leadership residency</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Executive track placements worldwide</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Masters / MBA in Hospitality Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Masters Course 3: Culinary Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/hotel-couse-banner302.jpg" style="object-position:30% 30%" alt="Executive Chef in Culinary Management Lab" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">M.Sc Culinary</span>
+              <span class="course-card-duration">2 Years &bull; Postgraduate</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Masters in Culinary Management</h3>
+                <p class="course-excerpt">
+                  Postgraduate specialization in molecular gastronomy, artisanal baking science, culinary entrepreneurship, and international kitchen chain consulting for executive head chefs.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Advanced molecular cooking &amp; food styling</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Masterclasses with celebrated celebrity chefs</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>International Michelin-standard kitchen placement</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Masters in Culinary Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="swipe-hint">Swipe to see more &rarr;</div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         INDIAN IHM IN NUMBERS
+         ======================================================================== -->
+    <section class="numbers-section" id="numbers">
+      <div class="numbers-grid">
+        <div class="numbers-head" style="grid-area:head">
+          <div class="section-eyebrow"><span>Indian IHM in Numbers</span></div>
+          <h2 class="section-title">Results that speak for <span class="text-caramel">themselves</span></h2>
+        </div>
+        <div class="numbers-note" style="grid-area:note">
+          <p>Two campuses in Salt Lake, Kolkata, with a placement cell that stays with you until you&rsquo;re hired.</p>
+          <button class="numbers-link open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">Talk to a counsellor &rarr;</button>
+        </div>
+          <div class="num-tile num-indigo" style="grid-area:a">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/></svg></span>
+            <span class="num-val" data-count="100" data-suffix="%">100%</span>
+            <span class="num-lbl">Placement Record</span>
+          </div>
+          <div class="num-tile num-caramel" style="grid-area:b">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.2 7 22l5-3 5 3-1.2-8.8"/></svg></span>
+            <span class="num-pre">Up to</span><span class="num-val" data-count="50" data-suffix="%">50%</span>
+            <span class="num-lbl">Scholarship</span>
+          </div>
+          <div class="num-tile num-cream" style="grid-area:c">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg></span>
+            <span class="num-val" data-count="14" data-suffix="">14</span>
+            <span class="num-lbl">Courses</span>
+          </div>
+          <div class="num-tile num-indigo" style="grid-area:d">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+            <span class="num-val" data-count="30" data-suffix="+">30+</span>
+            <span class="num-lbl">Global Tie-ups</span>
+          </div>
+          <div class="num-tile num-cream" style="grid-area:e">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg></span>
+            <span class="num-val" data-count="99" data-suffix="%">99%</span>
+            <span class="num-lbl">Education Loan Success</span>
+          </div>
+          <div class="num-tile num-indigo" style="grid-area:f">
+            <span class="num-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></span>
+            <span class="num-val" data-count="8500" data-suffix="+">8,500+</span>
+            <span class="num-lbl">Students</span>
+          </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         MIDDLE OF THE PAGE CTA BANNER (HIGH IMPACT CALL TO ACTION)
+         ======================================================================== -->
+    <section class="mid-page-cta">
+      <div class="cta-rays" aria-hidden="true"></div>
+      <div class="mid-cta-grid">
+      <div class="mid-cta-inner">
+        <div class="mid-cta-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Direct Admissions Open for 2026-27</span>
+        </div>
+
+        <h2 class="mid-cta-title">
+          Shape an Extraordinary Global Career in <span>Hospitality &amp; Healthcare</span>
+        </h2>
+
+        <p class="mid-cta-desc">
+          Enroll with Eastern India's top hotel management institute. Benefit from guaranteed 100% placement support, international paid internships, and direct industry interaction in Kolkata's tech-hub Salt Lake City.
+        </p>
+
+        <div class="mid-cta-actions">
+          <button class="cta-btn-gold open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">
+            <span>Apply Online Now</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="tel:+919051475838" class="cta-btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call Helpline: +91 90514 75838</span>
+          </a>
+        </div>
+
+        <div class="mid-cta-perks">
+          <div class="mid-cta-perk">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>100% Placement Assistance</span>
+          </div>
+          <div class="mid-cta-perk">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Easy Educational EMI Options</span>
+          </div>
+          <div class="mid-cta-perk">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Merit-Based Scholarships</span>
+          </div>
+          <div class="mid-cta-perk">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>International Internship Pathways</span>
+          </div>
+        </div>
+      </div>
+        <div class="cta-cutout" aria-hidden="true">
+          <img class="cta-shadow" src="https://indianihm.com/wp-content/uploads/2023/01/cource_safelady.png" alt="">
+          <img class="cta-student" src="https://indianihm.com/wp-content/uploads/2023/01/cource_safelady.png" alt="Indian IHM culinary student in chef whites" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         NEW SECTION: ADVANTAGE@Indianihm
+         ======================================================================== -->
+    <section class="advantage-section" id="advantage">
+      <div class="section-container advantage-layout">
+        <div class="advantage-intro">
+          <div class="section-eyebrow"><span>ADVANTAGE@Indianihm</span></div>
+          <h2 class="section-title">12 reasons students choose <span class="text-caramel">Indian IHM</span></h2>
+          <p class="section-desc">Endless opportunities await. These are the pillars that put our graduates ahead in hotels, cruise lines and hospitals worldwide.</p>
+          <div class="adv-visual">
+            <div class="adv-visual-text">
+              <span class="adv-visual-kicker">Admissions 2026-27</span>
+              <strong>Learn in real kitchens, suites &amp; hospital labs</strong>
+              <button class="cta-btn-gold open-modal-btn" type="button" data-preset="Bachelor in Culinary Management">Apply Now &rarr;</button>
+            </div>
+            <img src="https://indianihm.com/wp-content/uploads/2024/01/cource_safelady2.webp" alt="Indian IHM culinary students in chef whites" loading="lazy">
+          </div>
+        </div>
+        <div class="adv-list">
+            <article class="adv-item">
+              <span class="adv-num">01</span>
+              <h3>Two Well-Equipped Campuses</h3>
+              <p>Two dedicated, fully functional campuses in Salt Lake with state-of-the-art kitchens, labs, and modern infrastructure.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">02</span>
+              <h3>Prime Connected Location</h3>
+              <p>Centrally located in Salt Lake Sector-V, seamlessly connected with Kolkata metro lines, transit hubs, and commercial zones.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">03</span>
+              <h3>AI Chatbot for Interviews</h3>
+              <p>Pioneering AI interview coaching simulation chatbot preparing students for international luxury brand screening.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">04</span>
+              <h3>Multiple Government Recognitions</h3>
+              <p>Affiliated with premier UGC-recognized universities and accredited government vocational bodies for authentic degrees.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">05</span>
+              <h3>Affordable Course Fees &amp; EMI</h3>
+              <p>Transparent, competitive fee schedules supported by flexible installment structures and bank education loan approvals.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">06</span>
+              <h3>National &amp; Global Internships</h3>
+              <p>Direct internships with Taj, Oberoi, Marriott, Apollo Hospitals, and leading hospitality cruise organizations worldwide.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">07</span>
+              <h3>Global Exposures &amp; Twinning</h3>
+              <p>International study tours, exchange pathways, and twinning arrangements with premier foreign hospitality institutes.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">08</span>
+              <h3>360&deg; Learning &amp; Skill Focus</h3>
+              <p>Emphasis on personality grooming, spoken English mastery, wine etiquette, and contemporary hospitality tech.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">09</span>
+              <h3>Scholarships &amp; Grants</h3>
+              <p>Substantial merit-cum-means scholarship opportunities ensuring talented students never face financial barriers.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">10</span>
+              <h3>Start-up &amp; Entrepreneurship Hub</h3>
+              <p>Centre of Excellence for Entrepreneurship providing seed guidance, culinary venture incubation, and cafe startup mentorship.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">11</span>
+              <h3>Dedicated Placement Cell</h3>
+              <p>Continuous on-campus recruitment drives, recruiter conclaves, and alumni mentor networks active year-round.</p>
+            </article>
+            <article class="adv-item">
+              <span class="adv-num">12</span>
+              <h3>Live Industry Workshops</h3>
+              <p>Frequent interactions with executive chefs, general managers, and healthcare CEOs from top multispecialty hospitals.</p>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CAMPUS & TRAINING FACILITIES
+         ======================================================================== -->
+    <section class="facilities-section" id="facilities">
+      <div class="section-container">
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span>State-of-the-Art Infrastructure</span>
+          </div>
+          <h2 class="section-title">World-Class Campus Labs &amp; Training Rooms</h2>
+          <p class="section-desc">
+            Train inside professional production kitchens, mock 5-star presidential suites, and medical simulation clinics in Salt Lake Sector-V.
+          </p>
+        </div>
+
+        <div class="facilities-grid-3">
+          
+          <div class="facility-box">
+            <div class="facility-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/01/aboutbanner_1.jpg" style="object-position:40% 40%" alt="Advanced Food Production and Commercial Bakery Kitchen Lab" loading="lazy">
+            </div>
+            <div class="facility-content">
+              <h3 class="facility-title">Food Production &amp; Bakery Lab</h3>
+              <p class="facility-desc">
+                Fully equipped with commercial ovens, gas ranges, stainless steel fabrication benches, and international baking equipment replicating 5-star hotel kitchens.
+              </p>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <div class="facility-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2025/02/Hotel-IMG.webp" alt="Five Star Mock Suite and Front Office" loading="lazy">
+            </div>
+            <div class="facility-content">
+              <h3 class="facility-title">5-Star Suite &amp; Front Office Lab</h3>
+              <p class="facility-desc">
+                Realistic mock hotel suite, reception concierge desk, and automated property management reservation software for hands-on guest relations grooming.
+              </p>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <div class="facility-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/02/home_image13.jpg" alt="Smart Classrooms and Air-conditioned Lecture Rooms" loading="lazy">
+            </div>
+            <div class="facility-content">
+              <h3 class="facility-title">Smart Multimedia Lecture Halls</h3>
+              <p class="facility-desc">
+                Air-conditioned digital smart classrooms with audiovisual projectors, digital library access, and professional seminar conferencing setups.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="swipe-hint">Swipe to see more &rarr;</div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         NEW SECTION: INDUSTRY SPEAK (CELEBRITY CHEFS & HOSPITALITY ICONS)
+         ======================================================================== -->
+    <section class="industry-speak-section" id="industry-speak">
+      <div class="section-container">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span>Voices of Authority</span>
+          </div>
+          <h2 class="section-title">Industry Speak</h2>
+          <p class="section-desc">
+            Renowned celebrity chefs and corporate hoteliers sharing their admiration for the training culture and talent nurtured at Indian IHM.
+          </p>
+        </div>
+
+        <div class="industry-speak-grid">
+          
+          <!-- Speaker 1: Ranveer Brar -->
+          <article class="industry-speak-card">
+            <div class="speak-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/04/industyspea_img2-1-3.png" alt="Chef Ranveer Brar at Indian IHM" loading="lazy">
+            </div>
+            <div class="speak-card-body">
+              <div>
+                <h3 class="speak-author">Chef Ranveer Brar</h3>
+                <span class="speak-author-role">Celebrity Chef &amp; MasterChef Judge</span>
+              </div>
+              <p class="speak-quote">
+                &ldquo;I appreciate the way students are being groomed in Indian Institute of Hotel Management. Every career is fuelled by passion, hence I advise all students to bring passion in whatever you do.&rdquo;
+              </p>
+            </div>
+          </article>
+
+          <!-- Speaker 2: Padma Shri Chef Sanjeev Kapoor -->
+          <article class="industry-speak-card">
+            <div class="speak-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/04/industyspea-img1.webp" alt="Padma Shri Chef Sanjeev Kapoor at Indian IHM" loading="lazy">
+            </div>
+            <div class="speak-card-body">
+              <div>
+                <h3 class="speak-author">Padma Shri Chef Sanjeev Kapoor</h3>
+                <span class="speak-author-role">Culinary Legend &amp; Hospitality Pioneer</span>
+              </div>
+              <p class="speak-quote">
+                &ldquo;I wish the students of Indian Institute of Hotel Management a successful and rewarding career. I hope they pursue their career with integrity, dedication, and uncompromising standards.&rdquo;
+              </p>
+            </div>
+          </article>
+
+          <!-- Speaker 3: Chef Balpreet Singh Chadha -->
+          <article class="industry-speak-card">
+            <div class="speak-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2023/04/industyspea_img3-1.webp" alt="Chef Balpreet Singh Chadha" loading="lazy">
+            </div>
+            <div class="speak-card-body">
+              <div>
+                <h3 class="speak-author">Chef Balpreet Singh Chadha</h3>
+                <span class="speak-author-role">Director of Culinary Operations</span>
+              </div>
+              <p class="speak-quote">
+                &ldquo;Indian Institute of Hotel Management is doing astounding work in grooming up future hoteliers by providing its students the right footing and acquaintance with the global hotel and hospitality market.&rdquo;
+              </p>
+            </div>
+          </article>
+
+        </div>
+        <div class="swipe-hint">Swipe to see more &rarr;</div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION: OUR ALUMNI (AUTHENTIC INDIAN IHM PLACEMENTS WORLDWIDE)
+         ======================================================================== -->
+    <section class="alumni-section" id="alumni">
+      <div class="section-container">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span>Global Career Triumphs</span>
+          </div>
+          <h2 class="section-title">Our Alumni</h2>
+          <p class="section-desc">
+            From Italy and the United Kingdom to luxury resorts in Goa and corporate hotels in New Delhi, our graduates embody the excellence of Indian IHM.
+          </p>
+        </div>
+
+        <div class="alumni-grid">
+          
+          <!-- Alumni 1: Biswajit Dutta -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/biswajit.webp" alt="Biswajit Dutta - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Biswajit Dutta</h3>
+            <div class="alumni-location">Italy</div>
+            <div class="alumni-placement">P &amp; O Cruise Lines</div>
+            <p class="alumni-quote">
+              &ldquo;Indian IHM paved my way to European waters with comprehensive cruise line training and overseas placement guidance.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 2: Subhasish Gon -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/subhasish-gon.webp" alt="Subhasish Gon - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Subhasish Gon</h3>
+            <div class="alumni-location">United Kingdom</div>
+            <div class="alumni-placement">West End, Southampton</div>
+            <p class="alumni-quote">
+              &ldquo;The practical focus and English communication grooming in Kolkata helped me crack UK hospitality interviews seamlessly.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 3: Rohan Nath -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/rohan-nath.webp" alt="Rohan Nath - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Rohan Nath</h3>
+            <div class="alumni-location">Varca Beach, Goa</div>
+            <div class="alumni-placement">Club Mahindra Resorts</div>
+            <p class="alumni-quote">
+              &ldquo;The faculty members treat you like family while teaching hospitality standards of the highest caliber.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 4: Suranjana Tewari -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/suranjana-tewari.webp" alt="Suranjana Tewari - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Suranjana Tewari</h3>
+            <div class="alumni-location">New Delhi</div>
+            <div class="alumni-placement">Hyundai (Lobby Manager)</div>
+            <p class="alumni-quote">
+              &ldquo;Proud to be an alumnus of Indian IHM. The placement cell stands with you until you achieve your dream career.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 5: Divakar Karn -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/divakar-karn.webp" alt="Divakar Karn - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Divakar Karn</h3>
+            <div class="alumni-location">5-Star Luxury Property</div>
+            <div class="alumni-placement">Food &amp; Beverage Executive</div>
+            <p class="alumni-quote">
+              &ldquo;The kitchen and restaurant training labs at Salt Lake are equivalent to real 5-star hotel operational spaces.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 6: Durga Aditya -->
+          <div class="alumni-card">
+            <img src="https://indianihm.com/wp-content/uploads/2023/04/durga-aditya.webp" alt="Durga Aditya - Indian IHM Alumni" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Durga Aditya</h3>
+            <div class="alumni-location">Corporate Hospitality</div>
+            <div class="alumni-placement">Front Office Operations</div>
+            <p class="alumni-quote">
+              &ldquo;Indian IHM gives you the confidence, personality, and skills to succeed from day one on the job.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 7: Healthcare & Hospital Management Alumni -->
+          <div class="alumni-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Hospital Management Graduate" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Ananya Sen</h3>
+            <div class="alumni-location">Apollo Multispecialty</div>
+            <div class="alumni-placement">Hospital Administrator</div>
+            <p class="alumni-quote">
+              &ldquo;The clinical hospital attachments and NABH audit training gave me direct executive entry into Apollo.&rdquo;
+            </p>
+          </div>
+
+          <!-- Alumni 8: Master Culinary Graduate -->
+          <div class="alumni-card">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=400&q=80" alt="Executive Chef Graduate" class="alumni-avatar" loading="lazy">
+            <h3 class="alumni-name">Kunal Bhattacharya</h3>
+            <div class="alumni-location">Dubai, UAE</div>
+            <div class="alumni-placement">Chef de Partie, Marriott</div>
+            <p class="alumni-quote">
+              &ldquo;Mentorship by master chefs prepared me for high-volume luxury gastronomy in international hotel chains.&rdquo;
+            </p>
+          </div>
+
+        </div>
+        <div class="swipe-hint">Swipe to see more &rarr;</div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FOOTER SECTION
+         ======================================================================== -->
+    <footer class="site-footer" id="contact">
+      <div class="section-container">
+        
+        <div class="footer-cols-grid">
+          
+          <!-- Brand & Address -->
+          <div class="footer-brand-col">
+            <img src="https://indianihm.com/wp-content/uploads/2022/12/logo_white.png" alt="Indian Institute of Hotel Management Logo" class="footer-logo">
+            <p class="footer-about-text">
+              Indian Institute of Hotel Management is the premier hospitality, culinary, and hospital management institution in Kolkata, committed to 100% placement and excellence.
+            </p>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>
+                <strong>Campus 1:</strong> EN-33, Sector-V, Salt Lake City, Kolkata - 700091 (Opp. lane of HDFC Bank, near Webel More)<br>
+                <strong>Campus 2:</strong> EN-14, Sector-V, Salt Lake City, Kolkata - 700091
+              </span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Helpline: +91 90514 75838 / +91 90514 75839</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>admission@indianihm.com / admin@indianihm.com</span>
+            </div>
+          </div>
+
+          <!-- Bachelor Degrees -->
+          <div class="footer-nav-col">
+            <h3>Bachelor Degrees</h3>
+            <ul>
+              <li><a href="#courses" class="select-tab-bachelor" data-course="Bachelor in Hospital Management">Bachelor in Hospital Management</a></li>
+              <li><a href="#courses" class="select-tab-bachelor" data-course="Bachelor in Hospitality Management">Bachelor in Hospitality Management</a></li>
+              <li><a href="#courses" class="select-tab-bachelor" data-course="Bachelor in Culinary Management">Bachelor in Culinary Management</a></li>
+              <li><a href="#courses">Undergraduate Eligibility</a></li>
+              <li><a href="#hero">Fee Structure &amp; EMI</a></li>
+            </ul>
+          </div>
+
+          <!-- Masters & MBA -->
+          <div class="footer-nav-col">
+            <h3>Masters &amp; MBA</h3>
+            <ul>
+              <li><a href="#courses" class="select-tab-masters" data-course="Masters / MBA in Hospital Management">Masters / MBA in Hospital Management</a></li>
+              <li><a href="#courses" class="select-tab-masters" data-course="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</a></li>
+              <li><a href="#courses" class="select-tab-masters" data-course="Masters in Culinary Management">Masters in Culinary Management</a></li>
+              <li><a href="#courses">Postgraduate Eligibility</a></li>
+              <li><a href="#hero">Scholarship Guidelines</a></li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-nav-col">
+            <h3>Institute &amp; Campus</h3>
+            <ul>
+              <li><a href="#why-choose-us">Why Choose Us</a></li>
+              <li><a href="#advantage">ADVANTAGE@Indianihm</a></li>
+              <li><a href="#facilities">Campus Labs Tour</a></li>
+              <li><a href="#industry-speak">Industry Speak</a></li>
+              <li><a href="#alumni">Our Alumni</a></li>
+              <li><a href="#hero">Apply Online 2026</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 Indian Institute of Hotel Management (Indian IHM). All rights reserved.</div>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Sticky compact header (appears on scroll) -->
+  <div class="sticky-nav" id="sticky-nav" aria-hidden="true">
+    <a href="#hero" class="header-logo-link"><img src="https://indianihm.com/wp-content/uploads/2022/12/logo_inidanihm.png" alt="Indian IHM" class="sticky-logo"></a>
+    <nav class="sticky-links">
+      <a href="#courses">Programmes</a>
+      <a href="#advantage">Advantage</a>
+      <a href="#facilities">Campus</a>
+      <a href="#alumni">Alumni</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="header-cta-btn open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">Apply Online</button>
+  </div>
+
+  <!-- Mobile sticky action bar -->
+  <div class="mobile-cta-bar" id="mobile-cta-bar">
+    <a href="tel:+919051475838" class="mcb-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <button class="mcb-apply open-modal-btn" type="button" data-preset="Bachelor in Hospitality Management">Apply Now &rarr;</button>
+  </div>
+
+  <!-- ==========================================================================
+       ADMISSION MODAL (PORTALED)
+       ========================================================================== -->
+  <div class="modal-portal" id="admission-modal" role="dialog" aria-modal="true" aria-labelledby="modal-head">
+    <div class="modal-backdrop" id="modal-bg-close"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--brand-accent); text-transform: uppercase; letter-spacing: 0.1em;">Direct Admission Cell</span>
+          <h2 class="modal-title" id="modal-head">Apply for Admission</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-x-close" aria-label="Close modal" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="portal-modal-form" class="modal-form-fields">
+        <div class="modal-input-field">
+          <label class="modal-label" for="modal-name">Full Name *</label>
+          <input type="text" id="modal-name" class="modal-input" placeholder="Your full name" required>
+        </div>
+
+        <div class="modal-input-field">
+          <label class="modal-label" for="modal-phone">Phone / WhatsApp *</label>
+          <input type="tel" id="modal-phone" class="modal-input" placeholder="+91 98765 43210" required>
+        </div>
+
+        <div class="modal-input-field">
+          <label class="modal-label" for="modal-email">Email Address *</label>
+          <input type="email" id="modal-email" class="modal-input" placeholder="yourname@email.com" required>
+        </div>
+
+        <div class="modal-input-field">
+          <label class="modal-label" for="modal-course-select">Select Course *</label>
+          <select id="modal-course-select" class="modal-select" required>
+            <option value="Bachelor in Hospital Management">Bachelor in Hospital Management</option>
+            <option value="Masters / MBA in Hospital Management">Masters / MBA in Hospital Management</option>
+            <option value="Bachelor in Hospitality Management" selected>Bachelor in Hospitality Management</option>
+            <option value="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</option>
+            <option value="Bachelor in Culinary Management">Bachelor in Culinary Management</option>
+            <option value="Masters in Culinary Management">Masters in Culinary Management</option>
+          </select>
+        </div>
+
+        <div class="modal-input-field">
+          <label class="modal-label" for="modal-msg">Questions / Message</label>
+          <textarea id="modal-msg" class="modal-textarea" rows="2" placeholder="Ask about fees, hostel, or scholarships..."></textarea>
+        </div>
+
+        <button type="submit" class="modal-submit" id="modal-submit-btn">Submit Application &rarr;</button>
+      </form>
+
+      <div class="modal-success-state" id="modal-success-state">
+        <div class="success-icon-circ">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--brand-primary);">Application Submitted!</h3>
+        <p style="font-size: 0.875rem; color: #6e6058;" id="modal-success-text">
+          Thank you! Our Admissions Officer will connect with you via phone and email within 24 hours.
+        </p>
+        <button class="modal-submit" id="modal-done-btn" type="button" style="margin-top: 1rem; width: 100%;">Done</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE MENU OVERLAY
+       ========================================================================== -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-top">
+      <img src="https://indianihm.com/wp-content/uploads/2022/12/logo_white.png" alt="Indian IHM Logo" style="height: 2.75rem;">
+      <button class="burger-btn" id="close-menu-btn" aria-label="Close menu" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="#why-choose-us" class="mobile-nav-link">Why Choose Us</a>
+      <a href="#courses" class="mobile-nav-link">Programmes</a>
+      <a href="#advantage" class="mobile-nav-link">Advantage</a>
+      <a href="#facilities" class="mobile-nav-link">Campus Labs</a>
+      <a href="#industry-speak" class="mobile-nav-link">Industry Speak</a>
+      <a href="#alumni" class="mobile-nav-link">Our Alumni</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div>
+      <button class="cta-btn-gold open-modal-btn" type="button" style="width: 100%; justify-content: center;">
+        <span>Apply Online 2026</span>
+      </button>
+      <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7); text-align: center; margin-top: 1rem;">
+        Helpline: +91 90514 75838
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT MODULES & INTERACTION CONTROLLER
+       ========================================================================== -->
+  <script type="module">
+    import Lenis from 'lenis';
+
+    // 1. Lenis Smooth Scrolling
+    let lenis = null;
+    try {
+      lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2
+      });
+      function raf(t) {
+        lenis.raf(t);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    } catch (e) {
+      console.warn("Lenis init:", e);
+    }
+
+    function lockScroll() {
+      if (lenis) lenis.stop();
+      document.documentElement.style.overflow = 'hidden';
+    }
+    function unlockScroll() {
+      if (lenis) lenis.start();
+      document.documentElement.style.removeProperty('overflow');
+    }
+
+    // Scroll to top
+    window.scrollTo(0, 0);
+
+    // 2. Intro Loader Sequence
+    const loader = document.getElementById('intro-loader');
+    const loaderLogo = document.getElementById('loader-logo');
+    const loaderFill = document.getElementById('loader-fill');
+
+    lockScroll();
+
+    setTimeout(() => {
+      if (loaderLogo) loaderLogo.classList.add('reveal');
+      if (loaderFill) loaderFill.style.transform = 'scaleX(1)';
+    }, 100);
+
+    function dismissLoader() {
+      if (!loader) return;
+      loader.classList.add('slide-up');
+      unlockScroll();
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 850);
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(dismissLoader, 500);
+    });
+    // Fallback timer
+    setTimeout(dismissLoader, 1600);
+
+    // 3. Parallax Hero Background on Scroll
+    const heroInner = document.getElementById('hero-bg-inner');
+    const heroSection = document.getElementById('hero');
+    window.addEventListener('scroll', () => {
+      if (!heroInner || !heroSection) return;
+      const rect = heroSection.getBoundingClientRect();
+      const progress = Math.min(1, Math.max(0, -rect.top / (rect.height || 1)));
+      heroInner.style.transform = `translate3d(0, ${progress * 14}%, 0)`;
+    }, { passive: true });
+
+    // 4. Interactive Tabs Logic for Courses (Bachelor & Masters)
+    const tabBachelorBtn = document.getElementById('tab-bachelor-btn');
+    const tabMastersBtn = document.getElementById('tab-masters-btn');
+    const paneBachelor = document.getElementById('pane-bachelor');
+    const paneMasters = document.getElementById('pane-masters');
+
+    function switchTab(target) {
+      if (target === 'bachelor') {
+        tabBachelorBtn.classList.add('active');
+        tabBachelorBtn.setAttribute('aria-selected', 'true');
+        tabMastersBtn.classList.remove('active');
+        tabMastersBtn.setAttribute('aria-selected', 'false');
+
+        paneBachelor.classList.add('active');
+        paneMasters.classList.remove('active');
+      } else {
+        tabMastersBtn.classList.add('active');
+        tabMastersBtn.setAttribute('aria-selected', 'true');
+        tabBachelorBtn.classList.remove('active');
+        tabBachelorBtn.setAttribute('aria-selected', 'false');
+
+        paneMasters.classList.add('active');
+        paneBachelor.classList.remove('active');
+      }
+    }
+
+    tabBachelorBtn?.addEventListener('click', () => switchTab('bachelor'));
+    tabMastersBtn?.addEventListener('click', () => switchTab('masters'));
+
+    // Footer direct tab links
+    document.querySelectorAll('.select-tab-bachelor').forEach(link => {
+      link.addEventListener('click', () => {
+        switchTab('bachelor');
+      });
+    });
+    document.querySelectorAll('.select-tab-masters').forEach(link => {
+      link.addEventListener('click', () => {
+        switchTab('masters');
+      });
+    });
+
+    // 5. Hero Glassmorphism Form Submission
+    const heroForm = document.getElementById('hero-admission-form');
+    const heroSuccess = document.getElementById('hero-form-success');
+    const heroSuccessText = document.getElementById('hero-success-text');
+
+    heroForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('hero-name').value.trim();
+      const course = document.getElementById('hero-course').value;
+      const submitBtn = document.getElementById('hero-submit-btn');
+
+      submitBtn.disabled = true;
+      submitBtn.querySelector('span').textContent = 'Submitting...';
+
+      setTimeout(() => {
+        heroForm.style.display = 'none';
+        heroSuccess.classList.add('active');
+        const firstName = name.split(' ')[0] || 'there';
+        heroSuccessText.textContent = `Thank you, ${firstName}! Our Admissions Dean will call you with details and syllabus for ${course} shortly.`;
+      }, 600);
+    });
+
+    // 6. Portaled Admission Modal Logic
+    const admissionModal = document.getElementById('admission-modal');
+    const modalBgClose = document.getElementById('modal-bg-close');
+    const modalXClose = document.getElementById('modal-x-close');
+    const modalCourseSelect = document.getElementById('modal-course-select');
+    const portalForm = document.getElementById('portal-modal-form');
+    const modalSuccessState = document.getElementById('modal-success-state');
+    const modalDoneBtn = document.getElementById('modal-done-btn');
+
+    function openModalWithCourse(courseName = null) {
+      if (courseName && modalCourseSelect) {
+        modalCourseSelect.value = courseName;
+      }
+      admissionModal.classList.add('active');
+      lockScroll();
+      setTimeout(() => {
+        document.getElementById('modal-name')?.focus();
+      }, 150);
+    }
+
+    function closeModal() {
+      admissionModal.classList.remove('active');
+      unlockScroll();
+      setTimeout(() => {
+        portalForm.reset();
+        portalForm.style.display = 'flex';
+        modalSuccessState.classList.remove('active');
+        const submit = document.getElementById('modal-submit-btn');
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = 'Submit Application →';
+        }
+      }, 300);
+    }
+
+    document.querySelectorAll('.open-modal-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const preset = btn.getAttribute('data-preset');
+        openModalWithCourse(preset);
+      });
+    });
+
+    modalBgClose?.addEventListener('click', closeModal);
+    modalXClose?.addEventListener('click', closeModal);
+    modalDoneBtn?.addEventListener('click', closeModal);
+
+    portalForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('modal-name').value.trim();
+      const course = modalCourseSelect.value;
+      const submit = document.getElementById('modal-submit-btn');
+
+      submit.disabled = true;
+      submit.textContent = 'Sending Application...';
+
+      setTimeout(() => {
+        portalForm.style.display = 'none';
+        modalSuccessState.classList.add('active');
+        const firstName = name.split(' ')[0] || 'there';
+        document.getElementById('modal-success-text').textContent = 
+          `Thanks, ${firstName}! We have received your application for ${course}. Our admissions office will get in touch shortly.`;
+      }, 600);
+    });
+
+    // 7. Mobile Navigation Menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openMenuBtn = document.getElementById('open-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('active');
+      lockScroll();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('active');
+      unlockScroll();
+    }
+
+    openMenuBtn?.addEventListener('click', openMobileMenu);
+    closeMenuBtn?.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Escape Key Listener
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (admissionModal.classList.contains('active')) closeModal();
+        if (mobileMenu.classList.contains('active')) closeMobileMenu();
+      }
+    });
+
+    // Smooth Anchor Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href.length <= 1) return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          if (lenis) {
+            lenis.scrollTo(target, { offset: -20, duration: 1.2 });
+          } else {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // 8. Engagement: sticky header, mobile CTA bar, scroll reveal, count-up
+    const stickyNav = document.getElementById('sticky-nav');
+    const mobileBar = document.getElementById('mobile-cta-bar');
+    const heroFormCard = document.querySelector('.hero-glass-form-card');
+    function onScrollUI() {
+      const y = window.scrollY;
+      const heroH = heroSection ? heroSection.offsetHeight : 600;
+      stickyNav?.classList.toggle('show', y > heroH * 0.6);
+      const formBottom = heroFormCard ? heroFormCard.getBoundingClientRect().bottom : 0;
+      mobileBar?.classList.toggle('show', formBottom < 0);
+    }
+    window.addEventListener('scroll', onScrollUI, { passive: true });
+    onScrollUI();
+
+    const revealSel = [
+      '.section-header-center', '.why-choose-content', '.why-choose-media',
+      '.course-card', '.mid-cta-inner', '.cta-cutout', '.adv-item', '.adv-visual', '.num-tile', '.facility-box',
+      '.industry-speak-card', '.alumni-card', '.footer-cols-grid > *'
+    ].join(',');
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('js-reveal');
+      const groups = new Map();
+      document.querySelectorAll(revealSel).forEach(el => {
+        el.classList.add('reveal');
+        const parent = el.parentElement;
+        const idx = groups.get(parent) || 0;
+        groups.set(parent, idx + 1);
+        el.style.setProperty('--d', Math.min(idx, 5) * 80 + 'ms');
+      });
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+
+    function countUp(el) {
+      const target = +el.dataset.count, suffix = el.dataset.suffix || '';
+      const start = performance.now(), dur = 1400;
+      function tick(t) {
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('en-IN') + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    setTimeout(() => document.querySelectorAll('.hero-proof-stats [data-count]').forEach(countUp), 900);
+    if ('IntersectionObserver' in window) {
+      const numIO = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { countUp(e.target); numIO.unobserve(e.target); }
+      }), { threshold: 0.4 });
+      document.querySelectorAll('.num-tile [data-count]').forEach(el => numIO.observe(el));
+    }
+
+    // Course image fallback: never show an empty box
+    document.querySelectorAll('.course-card-img').forEach(img => {
+      img.addEventListener('error', () => {
+        img.src = 'https://indianihm.com/wp-content/uploads/2025/02/Hotel-IMG.webp';
+      }, { once: true });
+    });
+
+  </script>
+</body>
+</html>
