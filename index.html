@@ -1498,6 +1498,151 @@
     }
 
     /* ==========================================================================
+       SECTION: VIDEO TESTIMONIALS (STUDENT & ALUMNI SUCCESS STORIES)
+       ========================================================================== */
+    .video-testimonials-section {
+      background: linear-gradient(180deg, #fbf1e8 0%, #f8eadf 100%);
+      padding: 5.5rem 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .video-testimonials-section {
+        padding: 6.5rem 2.5rem;
+      }
+    }
+    .video-testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    @media (min-width: 640px) {
+      .video-testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .video-testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .vt-card {
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      border: 1px solid #f0e2d6;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(44, 19, 133, 0.05);
+      transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    }
+    .vt-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 42px rgba(44, 19, 133, 0.12);
+      border-color: rgba(44, 19, 133, 0.25);
+    }
+    .vt-video-wrapper {
+      position: relative;
+      width: 100%;
+      background: #09021d;
+      aspect-ratio: 9 / 13;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .vt-video-player {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #000000;
+      display: block;
+    }
+    .vt-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background: #ffffff;
+    }
+    .vt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245, 158, 11, 0.12);
+      color: #b45309;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+    }
+    .vt-badge-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+    .vt-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      line-height: 1.3;
+      margin-bottom: 0.35rem;
+    }
+    .vt-subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .vt-quote {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #475569;
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .vt-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    .vt-expand-btn {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1rem;
+      background: rgba(44, 19, 133, 0.06);
+      color: var(--brand-primary);
+      border: 1px solid rgba(44, 19, 133, 0.18);
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 250ms ease;
+    }
+    .vt-expand-btn:hover {
+      background: var(--brand-primary);
+      color: #ffffff;
+      border-color: var(--brand-primary);
+      box-shadow: 0 6px 16px rgba(44, 19, 133, 0.2);
+    }
+
+    /* ==========================================================================
        SECTION: OUR ALUMNI (AUTHENTIC INDIAN IHM PLACEMENTS)
        ========================================================================== */
     .alumni-section {
@@ -2053,13 +2198,13 @@
 
     /* ---------- Section spacing: remove the double gaps ---------- */
     .why-choose-section, .courses-section, .advantage-section,
-    .facilities-section, .industry-speak-section, .alumni-section {
+    .facilities-section, .industry-speak-section, .video-testimonials-section, .alumni-section {
       padding: 3.25rem 1.25rem;
       border-radius: var(--radius-card-lg);
     }
     @media (min-width: 640px) {
       .why-choose-section, .courses-section, .advantage-section,
-      .facilities-section, .industry-speak-section, .alumni-section {
+      .facilities-section, .industry-speak-section, .video-testimonials-section, .alumni-section {
         padding: 4.25rem 2.5rem;
       }
     }
@@ -2183,7 +2328,7 @@
       .recruiter-tag { font-size: 0.85rem; padding: 0.45rem 1rem; }
 
       .why-choose-section, .courses-section, .advantage-section,
-      .facilities-section, .industry-speak-section, .alumni-section {
+      .facilities-section, .industry-speak-section, .video-testimonials-section, .alumni-section {
         padding: 2.5rem 1rem; border-radius: var(--radius-card);
       }
       .section-header-center { margin-bottom: 1.5rem; }
@@ -2200,7 +2345,7 @@
       .tab-btn-badge { display: none; }
 
       /* Swipeable carousels instead of tall stacks */
-      .tab-pane.active, .facilities-grid-3, .industry-speak-grid, .alumni-grid {
+      .tab-pane.active, .facilities-grid-3, .industry-speak-grid, .video-testimonials-grid, .alumni-grid {
         display: flex; grid-template-columns: none;
         overflow-x: auto; scroll-snap-type: x mandatory;
         gap: 0.85rem;
@@ -2208,10 +2353,10 @@
         scrollbar-width: none; -webkit-overflow-scrolling: touch;
       }
       .tab-pane.active::-webkit-scrollbar, .facilities-grid-3::-webkit-scrollbar,
-      .industry-speak-grid::-webkit-scrollbar, .alumni-grid::-webkit-scrollbar { display: none; }
-      .tab-pane.active > *, .facilities-grid-3 > *, .industry-speak-grid > * { flex: 0 0 86%; scroll-snap-align: center; }
+      .industry-speak-grid::-webkit-scrollbar, .video-testimonials-grid::-webkit-scrollbar, .alumni-grid::-webkit-scrollbar { display: none; }
+      .tab-pane.active > *, .facilities-grid-3 > *, .industry-speak-grid > *, .video-testimonials-grid > * { flex: 0 0 86%; scroll-snap-align: center; }
       .alumni-grid > * { flex: 0 0 68%; scroll-snap-align: center; }
-      .course-card:hover, .facility-box:hover, .industry-speak-card:hover, .alumni-card:hover { transform: none; }
+      .course-card:hover, .facility-box:hover, .industry-speak-card:hover, .vt-card:hover, .alumni-card:hover { transform: none; }
       .swipe-hint { display: flex; }
 
       .advantage-grid { gap: 0.6rem; }
@@ -2291,7 +2436,7 @@
 
     /* Section surfaces: cream cards on the peach page */
     .why-choose-section, .advantage-section { background: var(--cream); }
-    .courses-section, .facilities-section, .alumni-section {
+    .courses-section, .facilities-section, .video-testimonials-section, .alumni-section {
       background: linear-gradient(180deg, #fbf1e8 0%, #f8eadf 100%);
     }
     .why-pillar-card, .advantage-item-card { background: #fff; }
@@ -2624,6 +2769,7 @@
         <nav class="header-nav">
           <a href="#courses">Programmes</a>
           <a href="#why-choose-us">Why Us</a>
+          <a href="#video-testimonials">Videos</a>
           <a href="#facilities">Campus</a>
           <a href="#alumni">Alumni</a>
           <a href="#contact">Contact</a>
@@ -3424,6 +3570,156 @@
     </section>
 
     <!-- ========================================================================
+         SECTION: VIDEO TESTIMONIALS (STUDENTS & ALUMNI SUCCESS STORIES)
+         ======================================================================== -->
+    <section class="video-testimonials-section" id="video-testimonials">
+      <div class="section-container">
+        
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span>Authentic Stories &bull; Proven Careers</span>
+          </div>
+          <h2 class="section-title">Video Testimonials</h2>
+          <p class="section-desc">
+            In a world that’s constantly evolving, our students and alumni continue to make waves across international luxury hospitality, cruise liners, and global organizations. Watch their authentic placement and campus journeys.
+          </p>
+        </div>
+
+        <div class="video-testimonials-grid">
+          
+          <!-- Video Testimonial 1 -->
+          <div class="vt-card">
+            <div class="vt-video-wrapper">
+              <video 
+                class="vt-video-player"
+                controls 
+                playsinline 
+                preload="metadata"
+                poster="assets/videos/testimonial-1-thumb.jpg"
+                aria-label="Executive Placement Testimonial Video"
+              >
+                <source src="https://indianihm.com/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-06-at-12.02.18-PM.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="vt-content">
+              <div class="vt-badge">
+                <span class="vt-badge-dot"></span>
+                <span>2026 Placement Feature</span>
+              </div>
+              <h3 class="vt-title">Executive Placement Experience</h3>
+              <div class="vt-subtitle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>5-Star Luxury Hospitality Placement</span>
+              </div>
+              <p class="vt-quote">
+                &ldquo;The intensive operational grooming, live banquet setups, and personal interview coaching at Indian IHM turned my hospitality ambitions into a high-growth career reality.&rdquo;
+              </p>
+              <div class="vt-actions">
+                <button 
+                  class="vt-expand-btn open-video-btn" 
+                  type="button" 
+                  data-video-url="https://indianihm.com/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-06-at-12.02.18-PM.mp4"
+                  data-video-title="Executive Placement Testimonial - Indian IHM"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Watch in Theater Mode</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Testimonial 2 -->
+          <div class="vt-card">
+            <div class="vt-video-wrapper">
+              <video 
+                class="vt-video-player"
+                controls 
+                playsinline 
+                preload="metadata"
+                poster="assets/videos/testimonial-2-thumb.jpg"
+                aria-label="USA Placement Experience Video"
+              >
+                <source src="https://indianihm.com/wp-content/uploads/2026/01/Indian-IHM-Student-USA-Placement-Video_-2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="vt-content">
+              <div class="vt-badge">
+                <span class="vt-badge-dot"></span>
+                <span>International Placement</span>
+              </div>
+              <h3 class="vt-title">USA Placement Journey</h3>
+              <div class="vt-subtitle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>United States Hospitality Placement</span>
+              </div>
+              <p class="vt-quote">
+                &ldquo;From our Salt Lake Kolkata campus to international luxury hospitality in the United States — the placement cell guided my visa, interviews, and orientation at every single stage.&rdquo;
+              </p>
+              <div class="vt-actions">
+                <button 
+                  class="vt-expand-btn open-video-btn" 
+                  type="button" 
+                  data-video-url="https://indianihm.com/wp-content/uploads/2026/01/Indian-IHM-Student-USA-Placement-Video_-2.mp4"
+                  data-video-title="USA Student Placement Video - Indian IHM"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Watch in Theater Mode</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Testimonial 3 -->
+          <div class="vt-card">
+            <div class="vt-video-wrapper">
+              <video 
+                class="vt-video-player"
+                controls 
+                playsinline 
+                preload="metadata"
+                poster="assets/videos/testimonial-3-thumb.jpg"
+                aria-label="Alumni Industry Success Video"
+              >
+                <source src="https://indianihm.com/wp-content/uploads/2025/04/video1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="vt-content">
+              <div class="vt-badge">
+                <span class="vt-badge-dot"></span>
+                <span>Alumni Leadership</span>
+              </div>
+              <h3 class="vt-title">Industry Success &amp; Leadership</h3>
+              <div class="vt-subtitle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Senior Hospitality Professional &amp; Alumnus</span>
+              </div>
+              <p class="vt-quote">
+                &ldquo;The deep foundation built during our commercial kitchen sessions and leadership seminars continues to give me an edge in managing luxury hotel operations.&rdquo;
+              </p>
+              <div class="vt-actions">
+                <button 
+                  class="vt-expand-btn open-video-btn" 
+                  type="button" 
+                  data-video-url="https://indianihm.com/wp-content/uploads/2025/04/video1.mp4"
+                  data-video-title="Alumni Video Story - Indian IHM"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span>Watch in Theater Mode</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swipe-hint">Swipe to see more videos &rarr;</div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
          SECTION: OUR ALUMNI (AUTHENTIC INDIAN IHM PLACEMENTS WORLDWIDE)
          ======================================================================== -->
     <section class="alumni-section" id="alumni">
@@ -3596,6 +3892,7 @@
             <ul>
               <li><a href="#why-choose-us">Why Choose Us</a></li>
               <li><a href="#advantage">ADVANTAGE@Indianihm</a></li>
+              <li><a href="#video-testimonials">Video Testimonials</a></li>
               <li><a href="#facilities">Campus Labs Tour</a></li>
               <li><a href="#industry-speak">Industry Speak</a></li>
               <li><a href="#alumni">Our Alumni</a></li>
@@ -3626,6 +3923,7 @@
     <nav class="sticky-links">
       <a href="#courses">Programmes</a>
       <a href="#advantage">Advantage</a>
+      <a href="#video-testimonials">Videos</a>
       <a href="#facilities">Campus</a>
       <a href="#alumni">Alumni</a>
       <a href="#contact">Contact</a>
@@ -3715,12 +4013,13 @@
     <div class="modal-backdrop" id="video-modal-bg"></div>
     <div class="modal-panel" style="max-width: 56rem; padding: 1.25rem; background: #0e052c; border: 1px solid rgba(255,255,255,0.2);">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; color: #ffffff;">
-        <span style="font-size: 0.95rem; font-weight: 700; color: var(--brand-accent);" id="video-modal-title">Indian IHM Campus Video</span>
+        <span style="font-size: 0.95rem; font-weight: 700; color: var(--brand-accent);" id="video-modal-title">Indian IHM Video</span>
         <button class="modal-close-btn" id="video-modal-close" aria-label="Close video" type="button" style="background: rgba(255,255,255,0.15); color: #ffffff;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); background: #000000;">
+      <!-- YouTube Embed Container -->
+      <div id="lightbox-iframe-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); background: #000000;">
         <iframe 
           id="lightbox-iframe"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
@@ -3729,6 +4028,15 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+      </div>
+      <!-- Direct HTML5 Video Player Container -->
+      <div id="lightbox-video-container" style="display: none; justify-content: center; align-items: center; background: #000000; border-radius: var(--radius-md); overflow: hidden; max-height: 72vh;">
+        <video 
+          id="lightbox-video"
+          controls 
+          playsinline 
+          style="max-width: 100%; max-height: 70vh; display: block; margin: 0 auto; border-radius: var(--radius-md);"
+        ></video>
       </div>
     </div>
   </div>
@@ -3748,6 +4056,7 @@
       <a href="#why-choose-us" class="mobile-nav-link">Why Choose Us</a>
       <a href="#courses" class="mobile-nav-link">Programmes</a>
       <a href="#advantage" class="mobile-nav-link">Advantage</a>
+      <a href="#video-testimonials" class="mobile-nav-link">Video Testimonials</a>
       <a href="#facilities" class="mobile-nav-link">Campus Labs</a>
       <a href="#industry-speak" class="mobile-nav-link">Industry Speak</a>
       <a href="#alumni" class="mobile-nav-link">Our Alumni</a>
@@ -3968,11 +4277,33 @@
     const videoModalBg = document.getElementById('video-modal-bg');
     const videoModalClose = document.getElementById('video-modal-close');
     const lightboxIframe = document.getElementById('lightbox-iframe');
+    const lightboxIframeContainer = document.getElementById('lightbox-iframe-container');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxVideoContainer = document.getElementById('lightbox-video-container');
     const videoModalTitle = document.getElementById('video-modal-title');
 
     function openVideoModal(url, title = 'Indian IHM Video') {
-      if (lightboxIframe) lightboxIframe.src = url;
       if (videoModalTitle) videoModalTitle.textContent = title;
+      const isDirectMp4 = url && (url.endsWith('.mp4') || url.includes('.mp4'));
+
+      if (isDirectMp4) {
+        if (lightboxIframeContainer) lightboxIframeContainer.style.display = 'none';
+        if (lightboxIframe) lightboxIframe.src = '';
+        if (lightboxVideoContainer) lightboxVideoContainer.style.display = 'flex';
+        if (lightboxVideo) {
+          lightboxVideo.src = url;
+          lightboxVideo.play().catch(() => {});
+        }
+      } else {
+        if (lightboxVideoContainer) lightboxVideoContainer.style.display = 'none';
+        if (lightboxVideo) {
+          lightboxVideo.pause();
+          lightboxVideo.src = '';
+        }
+        if (lightboxIframeContainer) lightboxIframeContainer.style.display = 'block';
+        if (lightboxIframe) lightboxIframe.src = url;
+      }
+
       if (videoModal) videoModal.classList.add('active');
       lockScroll();
     }
@@ -3980,6 +4311,10 @@
     function closeVideoModal() {
       if (videoModal) videoModal.classList.remove('active');
       if (lightboxIframe) lightboxIframe.src = '';
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+      }
       unlockScroll();
     }
 

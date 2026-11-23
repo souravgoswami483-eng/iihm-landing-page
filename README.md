@@ -21,6 +21,7 @@ A high-proficiency, responsive landing page for the **Indian Institute of Hotel 
 - **ADVANTAGE@Indianihm**: 12-point institutional excellence grid directly from `indianihm.com`.
 - **Campus & Training Labs**: Highlights Food Production & Bakery Labs, 5-Star Mock Suites, and Smart Lecture Halls.
 - **Industry Speak**: Featuring testimonials from Chef Ranveer Brar, Padma Shri Chef Sanjeev Kapoor, and Chef Balpreet Singh Chadha.
+- **Video Testimonials**: High-definition video showcase featuring authentic student and alumni placement stories (USA international placement, 5-star hotel executive placements, and career milestones), complete with native HTML5 controls, high-res poster frames, and a dual-player lightbox theater modal (MP4 + YouTube).
 - **Our Alumni**: Authentic graduate placement records across Italy (P&O Cruises), UK, Goa (Club Mahindra), and New Delhi.
 - **Smooth Interaction & Animation**:
   - Lenis smooth scroll integration via CDN importmap.
