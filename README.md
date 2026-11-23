@@ -6,16 +6,17 @@ A high-proficiency, responsive landing page for the **Indian Institute of Hotel 
 
 - **Degree & Masters Programmes (Interactive Tabs)**:
   - **Bachelor Programmes**:
-    - Bachelor in Hospital Management
+    - Bachelor in Hotel Management
     - Bachelor in Hospitality Management
     - Bachelor in Culinary Management
   - **Masters / MBA Programmes**:
-    - Masters / MBA in Hospital Management
+    - Masters / MBA in Hotel Management
     - Masters / MBA in Hospitality Management
     - Masters in Culinary Management
-- **High-Contrast Hero Section with Glassmorphism Form**:
+- **High-Contrast Hero Section with Ambient Video & Glassmorphism Form**:
+  - Official Indian IHM campus video background.
   - Interactive admission counseling form with real-time feedback.
-  - Multi-stop dark gradient for 100% typography legibility.
+  - Dedicated video lightbox modal with sound & playback controls.
 - **Why Choose Us**: Institutional pillars covering practical grooming, global placements, and celebrity masterclasses.
 - **ADVANTAGE@Indianihm**: 12-point institutional excellence grid directly from `indianihm.com`.
 - **Campus & Training Labs**: Highlights Food Production & Bakery Labs, 5-Star Mock Suites, and Smart Lecture Halls.
