@@ -428,9 +428,12 @@
       pointer-events: none;
       z-index: 1;
     }
-    .hero-video-wrap iframe {
+    .hero-video-wrap iframe,
+    .hero-video-wrap video,
+    .hero-bg-video {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       border: 0;
       display: block;
       pointer-events: none;
@@ -2726,29 +2729,33 @@
          ======================================================================== -->
     <section class="hero-section" id="hero">
       
-      <!-- Parallax Background Plate with Official Indian IHM Website Video -->
+      <!-- Parallax Background Plate with Official Banner Video -->
       <div class="hero-bg-parallax">
         <div class="hero-bg-inner" id="hero-bg-inner">
           <div class="hero-video-wrap">
-            <iframe 
+            <video 
               id="hero-ambient-video"
-              src="https://www.youtube-nocookie.com/embed/am8xYiqCmZ4?autoplay=1&mute=1&controls=0&loop=1&playlist=am8xYiqCmZ4&playsinline=1&rel=0&showinfo=0&modestbranding=1&enablejsapi=1&iv_load_policy=3" 
-              title="The Indian Institute of Hotel Management: International Gateway to Success" 
-              frameborder="0" 
-              allow="autoplay; encrypted-media; picture-in-picture" 
-              allowfullscreen
-            ></iframe>
+              class="hero-bg-video"
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="auto"
+              poster="assets/videos/banner-video-poster.jpg"
+              aria-hidden="true"
+            >
+              <source src="assets/videos/banner-video.mp4" type="video/mp4">
+            </video>
           </div>
-          <!-- Fallback Poster Image from indianihm.com -->
+          <!-- Fallback Poster Image -->
           <img 
-            src="https://indianihm.com/wp-content/uploads/2023/04/video-bg.webp" 
+            src="assets/videos/banner-video-poster.jpg" 
             alt="Indian Institute of Hotel Management Campus Video Backdrop" 
             class="hero-video-fallback"
             fetchpriority="high"
             loading="eager"
           >
         </div>
-      </div>
       </div>
 
       <!-- Top Announcement Strip (inside hero) -->
@@ -2823,7 +2830,7 @@
             <a href="#courses" class="cta-btn-outline">
               <span>Explore Programmes</span>
             </a>
-            <button class="hero-video-trigger open-video-btn" type="button" data-video-url="https://www.youtube.com/embed/am8xYiqCmZ4?autoplay=1" data-video-title="The Indian Institute of Hotel Management: International Gateway to Success">
+            <button class="hero-video-trigger open-video-btn" type="button" data-video-url="assets/videos/banner-video.mp4" data-video-title="Indian Institute of Hotel Management Campus Video">
               <span class="play-icon-glow">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </span>
@@ -4280,9 +4287,16 @@
     // Fallback timer
     setTimeout(dismissLoader, 1600);
 
-    // 3. Parallax Hero Background on Scroll
+    // 3. Parallax Hero Background on Scroll & Ambient Video Autoplay
     const heroInner = document.getElementById('hero-bg-inner');
     const heroSection = document.getElementById('hero');
+    const heroAmbientVideo = document.getElementById('hero-ambient-video');
+
+    if (heroAmbientVideo) {
+      heroAmbientVideo.muted = true;
+      heroAmbientVideo.play().catch(() => {});
+    }
+
     window.addEventListener('scroll', () => {
       if (!heroInner || !heroSection) return;
       const rect = heroSection.getBoundingClientRect();
