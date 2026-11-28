@@ -1743,7 +1743,13 @@
     }
     @media (min-width: 768px) {
       .footer-cols-grid {
-        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .footer-cols-grid {
+        grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr;
+        gap: 2rem;
       }
     }
 
@@ -2878,6 +2884,11 @@
                   <option value="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</option>
                   <option value="Masters in Culinary Management">Masters in Culinary Management</option>
                 </optgroup>
+                <optgroup label="Diploma Programs (12 / 18 Months)">
+                  <option value="Diploma in Hotel Management">Diploma in Hotel Management</option>
+                  <option value="Diploma in Hospitality Management">Diploma in Hospitality Management</option>
+                  <option value="Diploma in Culinary Management">Diploma in Culinary Management</option>
+                </optgroup>
               </select>
             </div>
 
@@ -3025,6 +3036,10 @@
             <button class="tab-btn" id="tab-masters-btn" role="tab" aria-selected="false" aria-controls="pane-masters" type="button">
               <span>Masters / MBA</span>
               <span class="tab-btn-badge">Postgraduate</span>
+            </button>
+            <button class="tab-btn" id="tab-diploma-btn" role="tab" aria-selected="false" aria-controls="pane-diploma" type="button">
+              <span>Diploma Courses</span>
+              <span class="tab-btn-badge">Professional</span>
             </button>
           </div>
         </div>
@@ -3242,6 +3257,116 @@
               </div>
               <div class="course-card-footer">
                 <button class="apply-course-btn open-modal-btn" type="button" data-preset="Masters in Culinary Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Tab 3: Diploma Courses (From Website) -->
+        <div class="tab-pane" id="pane-diploma" role="tabpanel">
+          
+          <!-- Diploma Course 1: Hotel Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/01/course-staf-2.webp" style="object-position:center 30%" alt="Diploma in Hotel Management students in front office training" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">DHM</span>
+              <span class="course-card-duration">12 / 18 Months &bull; Professional Diploma</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Diploma in Hotel Management</h3>
+                <p class="course-excerpt">
+                  A career-accelerating diploma concentrating on luxury front desk operations, hotel accounts, housekeeping, food and beverage management, and catering upkeep to establish students in top-tier hotels and resorts.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Front Office Operations &amp; Luxury Guest Service</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Housekeeping &amp; Hotel Maintenance Upkeep</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Food &amp; Beverage Management &amp; Banquet Catering</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Diploma in Hotel Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Diploma Course 2: Hospitality Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/12/hospitality-banner30.jpg" style="object-position:center 35%" alt="Diploma in Hospitality Management guest relations" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">Diploma Hospitality</span>
+              <span class="course-card-duration">12 / 18 Months &bull; Professional Diploma</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Diploma in Hospitality Management</h3>
+                <p class="course-excerpt">
+                  A dynamic professional programme covering 5-star hotel management, customer service excellence, account management, and travel/tour operations with guaranteed internships and direct recruiter placements.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Customer Service Excellence &amp; Guest Relations</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Hotel Operations &amp; Reservation Systems</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Travel, Tourism &amp; Event Hospitality Management</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Diploma in Hospitality Management">Apply Now</button>
+                <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Diploma Course 3: Culinary Management -->
+          <article class="course-card">
+            <div class="course-card-img-wrap">
+              <img src="https://indianihm.com/wp-content/uploads/2024/01/cource_safelady2.webp" style="object-position:center 30%" alt="Diploma in Culinary Management chef training" class="course-card-img" loading="eager" decoding="async">
+              <span class="course-card-badge">Diploma Culinary</span>
+              <span class="course-card-duration">12 / 18 Months &bull; Professional Diploma</span>
+            </div>
+            <div class="course-card-body">
+              <div>
+                <h3 class="course-title">Diploma in Culinary Management</h3>
+                <p class="course-excerpt">
+                  A hands-on blend of culinary arts and kitchen management that trains students how to cook, bake, supervise, and operate high-volume commercial kitchens, restaurants, and luxury catering establishments.
+                </p>
+                <div class="course-highlights">
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Commercial Kitchen Operations &amp; Cooking Arts</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Bakery, Confectionery &amp; Pastry Production</span>
+                  </div>
+                  <div class="course-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <span>Food Hygiene, Nutrition &amp; Kitchen Cost Control</span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="apply-course-btn open-modal-btn" type="button" data-preset="Diploma in Culinary Management">Apply Now</button>
                 <a href="#hero" class="course-curriculum-link">View Syllabus &rarr;</a>
               </div>
             </div>
@@ -3886,6 +4011,18 @@
             </ul>
           </div>
 
+          <!-- Diploma Courses -->
+          <div class="footer-nav-col">
+            <h3>Diploma Courses</h3>
+            <ul>
+              <li><a href="#courses" class="select-tab-diploma" data-course="Diploma in Hotel Management">Diploma in Hotel Management</a></li>
+              <li><a href="#courses" class="select-tab-diploma" data-course="Diploma in Hospitality Management">Diploma in Hospitality Management</a></li>
+              <li><a href="#courses" class="select-tab-diploma" data-course="Diploma in Culinary Management">Diploma in Culinary Management</a></li>
+              <li><a href="#courses">Eligibility (Class 10+)</a></li>
+              <li><a href="#hero">Fast-Track Admissions</a></li>
+            </ul>
+          </div>
+
           <!-- Quick Links -->
           <div class="footer-nav-col">
             <h3>Institute &amp; Campus</h3>
@@ -3975,12 +4112,21 @@
         <div class="modal-input-field">
           <label class="modal-label" for="modal-course-select">Select Course *</label>
           <select id="modal-course-select" class="modal-select" required>
-            <option value="Bachelor in Hotel Management">Bachelor in Hotel Management</option>
-            <option value="Masters / MBA in Hotel Management">Masters / MBA in Hotel Management</option>
-            <option value="Bachelor in Hospitality Management" selected>Bachelor in Hospitality Management</option>
-            <option value="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</option>
-            <option value="Bachelor in Culinary Management">Bachelor in Culinary Management</option>
-            <option value="Masters in Culinary Management">Masters in Culinary Management</option>
+            <optgroup label="Bachelor Degree Programs">
+              <option value="Bachelor in Hotel Management">Bachelor in Hotel Management</option>
+              <option value="Bachelor in Hospitality Management" selected>Bachelor in Hospitality Management</option>
+              <option value="Bachelor in Culinary Management">Bachelor in Culinary Management</option>
+            </optgroup>
+            <optgroup label="Masters & MBA Programs">
+              <option value="Masters / MBA in Hotel Management">Masters / MBA in Hotel Management</option>
+              <option value="Masters / MBA in Hospitality Management">Masters / MBA in Hospitality Management</option>
+              <option value="Masters in Culinary Management">Masters in Culinary Management</option>
+            </optgroup>
+            <optgroup label="Diploma Programs">
+              <option value="Diploma in Hotel Management">Diploma in Hotel Management</option>
+              <option value="Diploma in Hospitality Management">Diploma in Hospitality Management</option>
+              <option value="Diploma in Culinary Management">Diploma in Culinary Management</option>
+            </optgroup>
           </select>
         </div>
 
@@ -4144,45 +4290,46 @@
       heroInner.style.transform = `translate3d(0, ${progress * 14}%, 0)`;
     }, { passive: true });
 
-    // 4. Interactive Tabs Logic for Courses (Bachelor & Masters)
+    // 4. Interactive Tabs Logic for Courses (Bachelor, Masters & Diploma)
     const tabBachelorBtn = document.getElementById('tab-bachelor-btn');
     const tabMastersBtn = document.getElementById('tab-masters-btn');
+    const tabDiplomaBtn = document.getElementById('tab-diploma-btn');
     const paneBachelor = document.getElementById('pane-bachelor');
     const paneMasters = document.getElementById('pane-masters');
+    const paneDiploma = document.getElementById('pane-diploma');
 
     function switchTab(target) {
-      if (target === 'bachelor') {
-        tabBachelorBtn.classList.add('active');
-        tabBachelorBtn.setAttribute('aria-selected', 'true');
-        tabMastersBtn.classList.remove('active');
-        tabMastersBtn.setAttribute('aria-selected', 'false');
+      const tabs = [
+        { key: 'bachelor', btn: tabBachelorBtn, pane: paneBachelor },
+        { key: 'masters', btn: tabMastersBtn, pane: paneMasters },
+        { key: 'diploma', btn: tabDiplomaBtn, pane: paneDiploma }
+      ];
 
-        paneBachelor.classList.add('active');
-        paneMasters.classList.remove('active');
-      } else {
-        tabMastersBtn.classList.add('active');
-        tabMastersBtn.setAttribute('aria-selected', 'true');
-        tabBachelorBtn.classList.remove('active');
-        tabBachelorBtn.setAttribute('aria-selected', 'false');
-
-        paneMasters.classList.add('active');
-        paneBachelor.classList.remove('active');
-      }
+      tabs.forEach(t => {
+        const isActive = t.key === target;
+        if (t.btn) {
+          t.btn.classList.toggle('active', isActive);
+          t.btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        }
+        if (t.pane) {
+          t.pane.classList.toggle('active', isActive);
+        }
+      });
     }
 
     tabBachelorBtn?.addEventListener('click', () => switchTab('bachelor'));
     tabMastersBtn?.addEventListener('click', () => switchTab('masters'));
+    tabDiplomaBtn?.addEventListener('click', () => switchTab('diploma'));
 
     // Footer direct tab links
     document.querySelectorAll('.select-tab-bachelor').forEach(link => {
-      link.addEventListener('click', () => {
-        switchTab('bachelor');
-      });
+      link.addEventListener('click', () => switchTab('bachelor'));
     });
     document.querySelectorAll('.select-tab-masters').forEach(link => {
-      link.addEventListener('click', () => {
-        switchTab('masters');
-      });
+      link.addEventListener('click', () => switchTab('masters'));
+    });
+    document.querySelectorAll('.select-tab-diploma').forEach(link => {
+      link.addEventListener('click', () => switchTab('diploma'));
     });
 
     // 5. Hero Glassmorphism Form Submission

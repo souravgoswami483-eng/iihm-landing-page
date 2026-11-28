@@ -4,7 +4,7 @@ A high-proficiency, responsive landing page for the **Indian Institute of Hotel 
 
 ## Features
 
-- **Degree & Masters Programmes (Interactive Tabs)**:
+- **Programmes & Courses (Interactive 3-Way Tabs)**:
   - **Bachelor Programmes**:
     - Bachelor in Hotel Management
     - Bachelor in Hospitality Management
@@ -13,6 +13,10 @@ A high-proficiency, responsive landing page for the **Indian Institute of Hotel 
     - Masters / MBA in Hotel Management
     - Masters / MBA in Hospitality Management
     - Masters in Culinary Management
+  - **Diploma Programmes (Professional Fast-Track)**:
+    - Diploma in Hotel Management (12 / 18 Months)
+    - Diploma in Hospitality Management (12 / 18 Months)
+    - Diploma in Culinary Management (12 / 18 Months)
 - **High-Contrast Hero Section with Ambient Video & Glassmorphism Form**:
   - Official Indian IHM campus video background.
   - Interactive admission counseling form with real-time feedback.
